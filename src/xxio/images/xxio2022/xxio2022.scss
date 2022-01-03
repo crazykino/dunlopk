@@ -21,9 +21,9 @@ body *, body :before, body :after {
 		margin:0 auto;
 		* {
 			word-break: keep-all;
-			letter-spacing: -.8px;
+			letter-spacing: 0px;
 			font-weight: 400;
-			font-family: 'Times', 'Spoqa Han Sans', 'notokr-regular', 'Dotum', verdana;
+			font-family: 'Myriad Pro', 'Spoqa Han Sans', 'notokr-regular', 'Dotum', verdana;
 		}
 	}
 	.row {
@@ -237,6 +237,7 @@ body *, body :before, body :after {
 					flex: 0 1 35%;
 					min-width: 35%;
 					max-width: 35%;
+					text-align: center;
 				}
 				&:nth-child(1) {
 					> p {
@@ -252,12 +253,15 @@ body *, body :before, body :after {
 					border: 1px solid #fff;
 					border-radius: 100px;
 					display: block;
-					font-size: 90%;
+					font-size: 20px;
 					text-align: center;
 					position: relative;
 					overflow: hidden;
-					padding-right: 0;
+					padding:10px 0;
 					z-index: 2;
+					span {
+						vertical-align: baseline;
+					}
 					&:after {
 						content: ' ';
 						display: block;
@@ -273,6 +277,10 @@ body *, body :before, body :after {
 					}
 				}
 			}
+		}
+		.products_bottom {
+			margin-top:3%;
+			text-align: center;
 		}
 		@media screen and (max-width: 1000px) {
 			.products_links {
@@ -300,6 +308,21 @@ body *, body :before, body :after {
 	}
 	// .debut_section {
 
-
+	.tec_section {
+		position:relative;
+		background: {
+			image: url('./tech_bg.png');
+			repeat: no-repeat;
+			size:cover;
+			position:center bottom;
+		}
+		.row {
+			position: absolute;
+			text-align: center;
+			padding-top: 3vw;
+			left: 0;
+			right: 0;
+		}
+	}
 
 }

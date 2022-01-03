@@ -239,7 +239,6 @@
 					</div>
 				</section>
 
-				<a name="activwing_rebound_frame" id="activwing_rebound_frame" class="scroll_anchor"></a>
 				<section class="debut_section">
 					<div class="row">
 						<div class="products">
@@ -250,24 +249,24 @@
 							<div class="products_links">
 								<div class="uc_flex left_to_right">
 									<p><img src="../images/xxio2022/new_x_logo.png" alt="" /></p>
-									<a href="./eks/"><span>XXIO X-eks- <br class="rwd_show800" />VIEW MORE</span></a>
+									<a href="./eks/"><span>&lt; &nbsp;XXIO X VIEW MORE</span></a>
 								</div>
 								<div class="uc_flex right_to_left">
 									<p><img src="../images/xxio2022/new_12_logo.png" alt="" /></p>
-									<a href="./12/"><span>XXIO 12 <br class="rwd_show800" />VIEW MORE</span></a>
+									<a href="./12/"><span>XXIO 12 VIEW MORE &nbsp;&gt;</span></a>
 								</div>
 							</div>
-							<!-- <div class="products_bottom growfadein">
-								<p><img src="./img/new_model.png" alt="" /></p>
-								<div class="products_bottom_dates">
-									<p><small><span class="label">ゼクシオ 12：2021年12月11日発売</span><br class="rwd_show600" />（スチールシャフトは2021年12月27日発売）</small></p>
-									<p><small><span class="label">ゼクシオ エックス：2021年12月11日発売</span><br class="rwd_show600" />（スチールシャフトは2021年12月25日発売）</small></p>
-									<p><small><span class="label">ゼクシオ レディス：2021年12月25日発売</span><span class="label end">ゼクシオ 12 レフトハンド：2022年1月29日発売</span></small></p>
-								</div>
-							</div> -->
+							<div class="products_bottom growfadein">
+								<p><img src="../images/xxio2022/new_model.png" alt="" /></p>
+							</div>
 						</div>
 					</div>
 					<p><img src="../images/xxio2022/new_bg.jpg" alt="" /></p>
+				</section>
+
+				<section class="tec_section">
+					<div class="row">
+					</div>
 				</section>
 
 			</div>
@@ -541,6 +540,9 @@
 
 				if (checkVisible($('.top_section'))&&!isVisible) {
 					$('.top_section').addClass('active');
+
+					$('.debut_section').find('.uc_flex').removeClass('active');
+					$('.debut_section').find('.growfadein').removeClass('active');
 					
 					isVisible=true;
 				}else{
@@ -549,19 +551,18 @@
 
 				if (checkVisible($('.debut_section'))&&!isVisible) {
 					$('.debut_section').addClass('active');
-					$('.debut_section').find('.growfadein').addClass('active');
+					$('.debut_section .products_flex').find('.growfadein').addClass('active');
 					
 					isVisible=true;
 				}else {
 					$('.debut_section').removeClass('active');
 				}
 				
-				if (checkVisible($('.debut_section .uc_flex'))&&!isVisible) {
+				if (checkVisible($('.debut_section .products'))&&!isVisible) {
 					$('.debut_section .uc_flex').addClass('active');
+					$('.debut_section .products_bottom').addClass('active');
 					
 					isVisible=true;
-				}else{
-					// $('.uc_flex').removeClass('active');
 				}
 
 
