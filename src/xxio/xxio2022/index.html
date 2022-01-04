@@ -269,8 +269,82 @@
 						<p class="p1">
 							‘에어로다이나믹 설계’와 ‘4중 스프링 구조’로<span>최대 비거리 실현</span>
 						</p>
+						<p class="p2">
+							공기의 흐름을 이용하여 안정적인 궤도와 빠른 헤드 스피드를 만들어 내는<br>
+							‘ACTIVWING’과 임팩트 시에 헤드에서 두 번의 반발력으로 튕겨내어 스프링과 같은<br>
+							파워를 만들어내는 ‘REBOUND FRAME’<br>
+							혁신적인 2가지 테크놀로지가 압도적인 비거리를 실현해 줍니다.
+						</p>
+
+						<div class="uc_flex">
+							<div class="left_to_right">
+								<img src="../images/xxio2022/tec_activ.png" alt="">	
+								<p>액티브윙</p>
+								<span>최대 헤드 스피드 실현 ‘에어로다이나믹 설계’</span>
+							</div>
+							<div class="right_to_left">
+								<img src="../images/xxio2022/tec_rebound.png" alt="">	
+								<p>리바운드프레임</p>
+								<span>최대 반발력 실현 ‘4중 스프링 구조’</span>
+							</div>
+						</div>
 					</div>
 				</section>
+
+				<section class="movie_section movie_sec01">
+					<div class="row left_to_right">
+						<a href="https://www.youtube.com/watch?v=XrFAo_-0ERU" class="youtube iframe">
+							<p class="f_yellow"><img src="../images/xxio2022/movie_txt.png" alt="ActivWing x REBOUND FRAME"></p>
+							<p class="active_text">액티브 윙 소개 영상 <i></i></p>
+						</a>
+					</div>
+					<!-- <iframe class="iframe_wrap" id="iframe_wrap1" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="640" height="360" src="https://www.youtube.com/embed/XrFAo_-0ERU?playsinline=1&amp;width=2560&amp;height=1439&amp;loop=1&amp;listType=playlist&amp;playlist=XrFAo_-0ERU&amp;rel=0&amp;controls=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fsports.dunlop.co.jp&amp;widgetid=1" data-gtm-yt-inspected-1_19="true"></iframe> -->
+					<!-- <script>
+						$(function(){
+							$.fn.youtube_stack.add('iframe_wrap1','XrFAo_-0ERU');
+						})
+					</script> -->
+				</section>
+
+				<section class="wing_section">
+					<div class="row">
+						<img src="../images/xxio2022/wing_txt.png" alt="ActivWing">
+						<p class="p1">최대 볼스피드를 실현하는 <br>에어로다이나믹 설계</p>
+						<p class="p2">‘ACTIVWING’은 다운 스윙의 시작과 함께 공기의 흐름을<br>
+							이용하여 헤드가 흔들림 없이 궤도를 따라 이동할 수 있도록<br>
+							도와주며, 임팩트 시 최적의 페이스 앵글을 만들어<br>
+							헤드 스피드의 손실없이 최대 비거리로 연결해주는<br>
+							혁신적인 헤드 설계 입니다.</p>
+						<a href="#" class="popup more"><span>에어로다이나믹 이란?</span></a>	
+					</div>
+					<div class="row">
+						<p class="p1">‘액티브 윙’으로<br>정확한 임팩트 실현</p>
+						<p class="bottom_to_top"><img src="../images/xxio2022/wing_txtbox01.png" alt="타점분산 - 17% 감소"></p>
+						<p class="bottom_to_top"><img src="../images/xxio2022/wing_txtbox02.png" alt="미스샷 - 23% 감소"></p>
+					</div>
+				</section>
+
+				<section class="movie_section movie_sec02">
+					<div class="row left_to_right">
+						<a href="https://www.youtube.com/watch?v=XrFAo_-0ERU" class="youtube iframe">
+							<p class="f_yellow"><img src="../images/xxio2022/movie_txt.png" alt="ActivWing x REBOUND FRAME"></p>
+							<p class="active_text">리바운드 프레임 소개 영상 <i></i></p>
+						</a>
+					</div>
+					<!-- <iframe class="iframe_wrap" id="iframe_wrap1" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="640" height="360" src="https://www.youtube.com/embed/XrFAo_-0ERU?playsinline=1&amp;width=2560&amp;height=1439&amp;loop=1&amp;listType=playlist&amp;playlist=XrFAo_-0ERU&amp;rel=0&amp;controls=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fsports.dunlop.co.jp&amp;widgetid=1" data-gtm-yt-inspected-1_19="true"></iframe> -->
+					<!-- <script>
+						$(function(){
+							$.fn.youtube_stack.add('iframe_wrap1','XrFAo_-0ERU');
+						})
+					</script> -->
+				</section>
+
+				<section class="rebound_section">
+					<div class="row">
+						
+					</div>
+				</section>
+
 
 			</div>
 			
@@ -560,7 +634,6 @@
 				}else {
 					$('.debut_section').removeClass('active');
 				}
-				
 				if (checkVisible($('.debut_section .products'))&&!isVisible) {
 					$('.debut_section .uc_flex').addClass('active');
 					$('.debut_section .products_bottom').addClass('active');
@@ -568,8 +641,41 @@
 					isVisible=true;
 				}
 
+				if (checkVisible($('.tec_section'))&&!isVisible) {
+					$('.tec_section').addClass('active');
+					$('.tec_section').find('.uc_flex > div').addClass('active');
+					
+					isVisible=true;
+				}else {
+					$('.tec_section').removeClass('active');
+				}
 
-				
+				if (checkVisible($('.movie_sec01'))&&!isVisible) {
+					$('.movie_sec01').addClass('active');
+					$('.movie_sec01').find('.row').addClass('active');
+					
+					isVisible=true;
+				}else {
+					$('.movie_sec01').removeClass('active');
+				}
+
+				if (checkVisible($('.wing_section'))&&!isVisible) {
+					$('.wing_section').addClass('active');
+					$('.wing_section').find('.bottom_to_top').addClass('active');
+					
+					isVisible=true;
+				}else {
+					$('.wing_section').removeClass('active');
+				}
+
+				if (checkVisible($('.movie_sec02'))&&!isVisible) {
+					$('.movie_sec02').addClass('active');
+					$('.movie_sec02').find('.row').addClass('active');
+					
+					isVisible=true;
+				}else {
+					$('.movie_sec02').removeClass('active');
+				}
 
 				lastSt = st;
 			});
