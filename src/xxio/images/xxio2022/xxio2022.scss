@@ -15,7 +15,7 @@ body *, body :before, body :after {
 		margin: -1px;
 		overflow: hidden;
 		clip: rect(0, 0, 0, 0);
-		border: 0;
+		border: 0; 
 	}
 	section {
 		margin:0 auto;
@@ -28,7 +28,8 @@ body *, body :before, body :after {
 	}
 	.row {
     max-width: 80vw;
-    padding: 0 5vw;
+		max-width:1010px;
+    // padding: 0 5vw;
     margin: 0 auto;
     text-align: left;
 	}
@@ -114,7 +115,7 @@ body *, body :before, body :after {
 
 	.uc_flex {
 		display: flex;
-    margin-right: -2vw;
+    // margin-right: -2vw;
 		> * {
 			flex: 1;
 			box-sizing: border-box;
@@ -310,6 +311,7 @@ body *, body :before, body :after {
 
 	.tec_section {
 		position:relative;
+		min-height:100vh;
 		background: {
 			image: url('./tech_bg.png');
 			repeat: no-repeat;
@@ -322,6 +324,19 @@ body *, body :before, body :after {
 			padding-top: 3vw;
 			left: 0;
 			right: 0;
+			p {
+				color:#fff;
+			}
+		}
+		.p1 {
+			font-size:50px;
+			font-weight: bold;
+			span {
+				display: block;
+				font-size:inherit;
+				font-weight: inherit;
+				color:#00afe8
+			}
 		}
 	}
 
