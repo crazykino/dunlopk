@@ -341,15 +341,91 @@
 
 				<section class="rebound_section">
 					<div class="row">
-						
+						<p class="heading"><img src="../images/xxio2022/rebound_txt.png" alt="REBOUND FRAME"></p>
+						<div class="uc_flex">
+							<div class="left_to_right">
+								<p>고반발을 실현하는<br>반발력의 진화</p>
+								<span>젝시오 고유의 컵페이스 구조에 ‘연-강-연-강’<br>
+									4중 스프링 구조의 ‘REBOUND FRAME’을 더해<br>
+									폭발적인 반발력을 만들어 줍니다.</span>
+							</div>
+							<div class="right_to_left">
+								<img src="../images/xxio2022/rebound_img01.png" alt="@">	
+							</div>
+						</div>
+						<p class="bottom_to_top"><img src="../images/xxio2022/rebound_img02.png" alt="@"></p>
 					</div>
 				</section>
 
 
+				<section class="rebound_section02">
+					<div class="row">
+						<p class="heading"><img src="../images/xxio2022/rebound_txt.png" alt="REBOUND FRAME"></p>
+						<div class="uc_flex">
+							<div class="left_to_right">
+								<p>시리즈 최고의 스피드를<br>실현하는 반발성능의 진화</p>
+								<span>‘REBOUND FRAME’을 아이언에도 탑재<br>
+									전체적으로 탄성력을 높이기 위한 얇은 페이스 설계<br>
+									바디 아래 부분의 ‘SOFT ZONE’과 바디 후방부의 <br>
+									‘HARD ZONE’을 통해 페이스 아래 부분의<br>
+									반발 성능을 향상시킨 ‘연,강’구조</span>
+							</div>
+							<div class="right_to_left">
+								<img src="../images/xxio2022/rebound_img03.png" alt="@">	
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="movie_section movie_sec03">
+					<div class="row left_to_right">
+						<a href="https://www.youtube.com/watch?v=XrFAo_-0ERU" class="youtube iframe">
+							<p class="f_yellow"><img src="../images/xxio2022/movie_txt02.png" alt="Iron x REBOUND FRAME"></p>
+							<p class="active_text">아이언 리바운드 프레임 소개 영상 <i></i></p>
+						</a>
+					</div>
+					<!-- <iframe class="iframe_wrap" id="iframe_wrap1" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="640" height="360" src="https://www.youtube.com/embed/XrFAo_-0ERU?playsinline=1&amp;width=2560&amp;height=1439&amp;loop=1&amp;listType=playlist&amp;playlist=XrFAo_-0ERU&amp;rel=0&amp;controls=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fsports.dunlop.co.jp&amp;widgetid=1" data-gtm-yt-inspected-1_19="true"></iframe> -->
+					<!-- <script>
+						$(function(){
+							$.fn.youtube_stack.add('iframe_wrap1','XrFAo_-0ERU');
+						})
+					</script> -->
+				</section>
+
+
+				<section class="product_section">
+					<div class="row">
+						<p class="heading"><img src="../images/xxio2022/produtc_title.png" alt="영리하게 위대하게"></p>
+						<div class="uc_flex">
+							<div class="bottom_to_top">
+								<a href="#">
+									<p class="pimg"><img src="../images/xxio2022/product_img01.png" alt="젝시오 엑스"></p>
+									<p class="plogo"><img src="../images/xxio2022/product_logo01.png" alt="젝시오 엑스"></p>
+									<p class="p1">젝시오 엑스</p>
+									<p class="more"><span>VIEW MORE</span></p>
+								</a>
+							</div>
+							<div class="bottom_to_top">
+								<a href="#">
+									<p class="pimg"><img src="../images/xxio2022/product_img02.png" alt="젝시오 12"></p>
+									<p class="plogo"><img src="../images/xxio2022/product_logo02.png" alt="젝시오 12"></p>
+									<p class="p1">젝시오 12</p>
+									<p class="more"><span>VIEW MORE</span></p>
+								</a>
+							</div>
+							<div class="bottom_to_top">
+								<a href="#">
+									<p class="pimg"><img src="../images/xxio2022/product_img03.png" alt="젝시오 레이디스"></p>
+									<p class="plogo"><img src="../images/xxio2022/product_logo03.png" alt="젝시오 레이디스"></p>
+									<p class="p1">젝시오 레이디스</p>
+									<p class="more"><span>VIEW MORE</span></p>
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
+
 			</div>
-			
-			
-			
 			
 			
 		</div>
@@ -650,15 +726,6 @@
 					$('.tec_section').removeClass('active');
 				}
 
-				if (checkVisible($('.movie_sec01'))&&!isVisible) {
-					$('.movie_sec01').addClass('active');
-					$('.movie_sec01').find('.row').addClass('active');
-					
-					isVisible=true;
-				}else {
-					$('.movie_sec01').removeClass('active');
-				}
-
 				if (checkVisible($('.wing_section'))&&!isVisible) {
 					$('.wing_section').addClass('active');
 					$('.wing_section').find('.bottom_to_top').addClass('active');
@@ -668,6 +735,14 @@
 					$('.wing_section').removeClass('active');
 				}
 
+				if (checkVisible($('.movie_sec01'))&&!isVisible) {
+					$('.movie_sec01').addClass('active');
+					$('.movie_sec01').find('.row').addClass('active');
+					
+					isVisible=true;
+				}else {
+					$('.movie_sec01').removeClass('active');
+				}
 				if (checkVisible($('.movie_sec02'))&&!isVisible) {
 					$('.movie_sec02').addClass('active');
 					$('.movie_sec02').find('.row').addClass('active');
@@ -675,6 +750,42 @@
 					isVisible=true;
 				}else {
 					$('.movie_sec02').removeClass('active');
+				}
+				if (checkVisible($('.movie_sec03'))&&!isVisible) {
+					$('.movie_sec03').addClass('active');
+					$('.movie_sec03').find('.row').addClass('active');
+					
+					isVisible=true;
+				}else {
+					$('.movie_sec03').removeClass('active');
+				}
+
+				if (checkVisible($('.rebound_section'))&&!isVisible) {
+					$('.rebound_section').addClass('active');
+					$('.rebound_section').find('.uc_flex > div').addClass('active');
+					$('.rebound_section').find('.bottom_to_top').addClass('active');
+					
+					isVisible=true;
+				}else {
+					$('.rebound_section').removeClass('active');
+				}
+
+				if (checkVisible($('.rebound_section02'))&&!isVisible) {
+					$('.rebound_section02').addClass('active');
+					$('.rebound_section02').find('.uc_flex > div').addClass('active');
+					
+					isVisible=true;
+				}else {
+					$('.rebound_section02').removeClass('active');
+				}
+
+				if (checkVisible($('.product_section'))&&!isVisible) {
+					$('.product_section').addClass('active');
+					$('.product_section').find('.bottom_to_top').addClass('active');
+					
+					isVisible=true;
+				}else {
+					$('.product_section').removeClass('active');
 				}
 
 				lastSt = st;
