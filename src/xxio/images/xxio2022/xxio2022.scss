@@ -32,6 +32,10 @@ body *, body :before, body :after {
     // padding: 0 5vw;
     margin: 0 auto;
     text-align: left;
+		@media screen and (max-width:1240px) {
+			padding-left:30px;
+			padding-right:30px;
+		}
 	}
 	.btn_play {
 		position:absolute;
@@ -283,7 +287,7 @@ body *, body :before, body :after {
 			margin-top:3%;
 			text-align: center;
 		}
-		@media screen and (max-width: 1000px) {
+		@media screen and (max-width: 1240px) {
 			.products_links {
 				flex-wrap: wrap;
 				margin-bottom: 5vw;
@@ -303,6 +307,12 @@ body *, body :before, body :after {
 							order: 2;
 						}
 					}
+				}
+			}
+			.products_bottom {
+				> p {
+					max-width:70%;
+					margin:0 auto;
 				}
 			}
 		}
@@ -374,6 +384,22 @@ body *, body :before, body :after {
 				color:#fff;
 			}
 		}
+		@media screen and (max-width:1240px) {
+			.p1 {
+				font-size:40px;
+			}
+			.p2 {
+				font-size:18px;
+			}
+			.uc_flex {
+				p {
+					font-size:28px;
+				}
+				span {
+					font-size:16px;
+				}
+			}
+		}
 	}
 
 	.movie_section {
@@ -413,6 +439,18 @@ body *, body :before, body :after {
 					position:0 0;
 				}
 				vertical-align: middle;
+			}
+		}
+		@media screen and (max-width:1240px) {
+			.f_yellow {
+				max-width:510px;
+			}
+			.active_text {
+				font-size:26px;
+				i {
+					width:38px;
+					height:38px;
+				}
 			}
 		}
 	}
@@ -481,6 +519,28 @@ body *, body :before, body :after {
 				margin-top:40px;
 			}
 		}
+		@media screen and (max-width:1240px) {
+			.pimg {
+				max-width:500px;
+			}
+			.p1 {
+				margin-top:40px;
+				font-size:40px;
+			}
+			.p2 {
+				margin-top:40px;
+				font-size:20px;
+			}
+			.more {
+				font-size:16px;
+			}
+
+			.bottom_to_top {
+				max-width:80%;
+				margin-left:auto;
+				margin-right:auto;
+			}
+		}
 	}
 
 	.rebound_section {
@@ -517,6 +577,26 @@ body *, body :before, body :after {
 		.bottom_to_top {
 			margin-top:90px;
 		}
+		@media screen and (max-width:1240px) {
+			.heading {
+				max-width:500px;
+			}
+			.uc_flex {
+				p {
+					margin-top:35px;
+					font-size:50px;
+				}
+				span {
+					margin-top:40px;
+					font-size:18px;
+				}
+			}
+			.bottom_to_top {
+				max-width:80%;
+				margin-left:auto;
+				margin-right:auto;
+			}
+		}
 	}
 	
 	.rebound_section02 {
@@ -545,6 +625,28 @@ body *, body :before, body :after {
 				margin-top:55px;
 				font-size:27px;
 				letter-spacing: -.05em;
+			}
+		}
+		@media screen and (max-width:1240px) {
+			.heading {
+				max-width:500px;
+			}
+			.uc_flex {
+				p {
+					margin-top:35px;
+					font-size:50px;
+				}
+				span {
+					margin-top:40px;
+					font-size:18px;
+				}
+				.left_to_right {flex:1.1}
+				.right_to_left {
+					flex:.9;
+					img {
+						max-width:85%;
+					}
+				}
 			}
 		}
 	}
