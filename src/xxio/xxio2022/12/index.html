@@ -250,15 +250,15 @@
               </div>
               <div class="products_links">
                 <div class="right_to_left">
-                  <p><img src="../../images/xxio2022/12/new_12_logo.png" alt=""></p>
+                  <p><img src="../../images/xxio2022/12/new_12_logo.png" alt="XXIO 12"></p>
                 </div>
               </div>
               <div class="products_bottom growfadein">
-                <p><img src="../../images/xxio2022/12/new_model.png" alt=""></p>
+                <p><img src="../../images/xxio2022/12/new_model.png" alt="2022 NEW MODEL"></p>
               </div>
             </div>
           </div>
-          <p><img src="../../images/xxio2022/12/new_bg.jpg" alt=""></p>
+          <p><img src="../../images/xxio2022/12/new_bg.jpg" alt="@"></p>
         </section>
 
 				<section class="tec_section">
@@ -279,7 +279,7 @@
 								<span>최대 헤드 스피드 실현 ‘에어로다이나믹 설계’</span>
 							</div>
 							<div class="right_to_left">
-								<img src="../../images/xxio2022/12/tec_rebound.png" alt="">	
+								<img src="../../images/xxio2022/12/tec_rebound.png" alt="@">	
 								<p>리바운드프레임</p>
 								<span>최대 반발력 실현 ‘4중 스프링 구조’</span>
 							</div>
@@ -289,7 +289,7 @@
 				</section>
 
 				<section class="driver_section">
-					<p class="headimg"><img src="../../images/xxio2022/12/driver_top.png" alt=""></p>
+					<p class="headimg"><img src="../../images/xxio2022/12/driver_top.png" alt="@"></p>
 					<div class="row driver_sub01">
 						<div class="heading">
 							<p class="ptit right_to_left">Driver</p>
@@ -298,8 +298,8 @@
 					</div>
 
 					<div class="row driver_sub02">
-						<p class="pimg right_to_left"><img src="../../images/xxio2022/12/driver_img02.png" alt=""></p>
-						<p class="pimg left_to_right"><img src="../../images/xxio2022/12/driver_img03.png" alt=""></p>
+						<p class="pimg right_to_left"><img src="../../images/xxio2022/12/driver_img02.png" alt="@"></p>
+						<p class="pimg left_to_right"><img src="../../images/xxio2022/12/driver_img03.png" alt="@"></p>
 					</div>
 
 					<div class="row driver_sub03">
@@ -316,7 +316,29 @@
 								</dl>
 							</div>
 						</div>
+						<p><img src="../../images/xxio2022/12/driver_img04.png" alt="@"></p>
 					</div>
+
+					<div class="row driver_sub04">
+						<div class="heading">
+							<p class="ptxt left_to_right">누구나 경험할 수 있는<br>가장 쉽고 빠른 비거리 증대 효과</p>
+						</div>
+						<div class="uc_flex">
+							<div>
+								<p class="pimg"><img src="../../images/xxio2022/12/driver_img05.png" alt="@"></p>
+								<p class="desc">샬로우 페이스로 안정감이 느껴지는 헤드 디자인<br>어드레스 시 임팩트 이미지를 그려볼 수 있는 실루엣</p>
+							</div>
+							<div>
+								<p class="pimg"><img src="../../images/xxio2022/12/driver_img06.png" alt="@"></p>
+								<p class="desc">젝시오 특유의 상쾌한 타구음을<br>느낄 수 있는 음역대</p>
+							</div>
+						</div>
+					</div>
+				</section>
+
+
+				<section class="fairway_section">
+					<p class="headimg"><img src="../../images/xxio2022/12/fairway_top.png" alt="@"></p>
 				</section>
 
 			</div>
@@ -619,13 +641,24 @@
 
 				if (checkVisible($('.driver_sub01'))&&!isVisible) {
 					$('.driver_sub01').find('p').addClass('active');
+
+					isVisible=true;
+				}
+				if (checkVisible($('.driver_sub02'))&&!isVisible) {
 					$('.driver_sub02').find('.pimg').addClass('active');
+					
+					isVisible=true;
+				}
+				if (checkVisible($('.driver_sub04'))&&!isVisible) {
+					$('.driver_sub04').find('p').addClass('active');
+					
+					isVisible=true;
 				}
 
 				lastSt = st;
 			});
 			var checkVisible = function(elem){
-			var docViewTop = $(window).scrollTop() + 300,
+			var docViewTop = $(window).scrollTop() + 100,
 				docViewBottom = docViewTop + $(window).height(),
 				elemTop = $(elem).offset().top,
 				elemBottom = elemTop + $(elem).height();
