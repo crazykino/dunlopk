@@ -107,18 +107,16 @@ body *, body :before, body :after {
 
 	.uc_flex {
 		display: flex;
-    // margin-right: -2vw;
 		> * {
 			flex: 1;
 			box-sizing: border-box;
-			// padding-right: 2vw;
 		}
 	}
 	.left_to_right {
 		opacity: 0;
     transform: translate3d(-150px, 0, 0) scale(1.01);
 		&.active {
-			animation: left_to_right 1.0s cubic-bezier(0.215, 0.61, 0.355, 1) 0.1s forwards;
+			animation: left_to_right 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) 0.1s forwards;
 		}
 	}
 	@keyframes left_to_right{
@@ -135,7 +133,7 @@ body *, body :before, body :after {
 		opacity: 0;
     transform: translate3d(50px, 0, 0) scale(1.01);
 		&.active {
-			animation: right_to_left 1.0s cubic-bezier(0.215, 0.61, 0.355, 1) 0.1s forwards;
+			animation: right_to_left 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) 0.1s forwards;
 		}
 	}
 	@keyframes right_to_left{
@@ -153,7 +151,7 @@ body *, body :before, body :after {
 		transform:translate3d(0,50px,0) scaleY(1);
 		transform-origin:top;
 		&.active{
-			animation:bottom_to_top 1.0s cubic-bezier(0.215, 0.61, 0.355, 1) 0.1s forwards;
+			animation:bottom_to_top 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) 0.1s forwards;
 		}
 	}
 	@keyframes bottom_to_top{
@@ -170,7 +168,7 @@ body *, body :before, body :after {
 		opacity:0;
 		transform:translate3d(0,-50px,0) scale(1.1);
 		&.active{
-			animation:top_to_bottom 1.0s cubic-bezier(0.215, 0.61, 0.355, 1) 0.1s forwards;
+			animation:top_to_bottom 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) 0.1s forwards;
 		}
 	}
 	@keyframes top_to_bottom{
@@ -262,6 +260,10 @@ body *, body :before, body :after {
 			left: 0;
 			width: 100%;
 			height: 100%;
+			img {
+				width:100%;
+				height:100%;
+			}
 		}
 		.products {
 			bottom: 0;
@@ -587,7 +589,7 @@ body *, body :before, body :after {
 	.fairway_section {
 		position:relative;
 		min-height:100vh;
-		padding-top:140px;
+		// padding-top:140px;
 		padding-bottom:10%;
 		background-color: #191919;
 		border-top:15px solid #000be3;
@@ -644,6 +646,213 @@ body *, body :before, body :after {
 						}
 					}
 				}
+			}
+		}
+		.fairway_sub03 {
+			margin-top:125px;
+			.uc_flex {
+				margin-top:15px;
+				margin-bottom:50px;
+				> div {
+					flex:.5;
+					padding:30px;
+					&:first-of-type {
+						background-color: #474747;
+						p {
+							font-weight: bold;
+							font-size:17px;
+							line-height:1.8;
+							color:#fff;
+						}
+					}
+				}
+			}
+		}
+		.fairway_sub04 {
+			margin-top:170px;
+		}
+	}// 
+
+	.hybrids_section {
+		position:relative;
+		min-height:100vh;
+		padding-top:140px;
+		padding-bottom:10%;
+		background-color: #191919;
+		border-top:15px solid #000be3;
+		.headimg {
+			position:absolute;
+			left:0;
+			right:0;
+			top:140px;
+			width:100%;
+		}
+		.row {
+			position:relative;
+			z-index: 1;
+		}
+		.heading {
+			padding-top:15%;
+			.ptit {
+				font-size:115px;
+				font-weight: bold;
+				line-height:1.2;
+				color:#fff;
+				text-align: right;
+			}
+			.ptxt {
+				padding-top:30%;
+				font-size:55px;
+				font-weight: bold;
+				color:#fff;
+			}
+		}
+		.hybrids_sub02 {
+			margin-top:125px;
+			.uc_flex {
+				margin-top:15px;
+				> div {
+					padding:30px;
+					&:first-of-type {
+						background-color: #474747;
+						p {
+							font-weight: bold;
+							font-size:17px;
+							line-height:1.8;
+							color:#fff;
+						}
+					}
+					&:last-of-type {
+						margin-left:15px;
+						border:1px solid #a1d3e9;
+						p {
+							font-weight: bold;
+							font-size:35px;
+							color:#fff;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.iron_section {
+		position:relative;
+		min-height:100vh;
+		padding-top:140px;
+		padding-bottom:10%;
+		background-color: #191919;
+		border-top:15px solid #000be3;
+		.headimg {
+			position:absolute;
+			left:0;
+			right:0;
+			top:140px;
+			width:100%;
+		}
+		.row {
+			position:relative;
+			z-index: 1;
+		}
+		.heading {
+			padding-top:15%;
+			.ptit {
+				font-size:115px;
+				font-weight: bold;
+				line-height:1.2;
+				color:#fff;
+				text-align: right;
+			}
+			.ptxt {
+				padding-top:30%;
+				font-size:55px;
+				font-weight: bold;
+				color:#fff;
+			}
+		}
+		.iron_sub02 {
+			margin-top:125px;
+			.desc {
+				margin-bottom:60px;
+				font-size:40px;
+				font-weight: bold;
+				color:#fff;
+				span {
+					display: block;
+					margin-top:15px;
+					font-size:17px;
+					color:#fff;
+				}
+			}
+			.pimg {
+				&:last-of-type {
+					margin-top:-14%;
+				}
+			}
+			.uc_flex {
+				margin-top:15px;
+				> div {
+					padding:30px;
+					&:first-of-type {
+						background-color: #474747;
+						p {
+							font-weight: bold;
+							font-size:17px;
+							line-height:1.8;
+							color:#fff;
+						}
+					}
+					&:last-of-type {
+						margin-left:15px;
+						border:1px solid #a1d3e9;
+						p {
+							font-weight: bold;
+							font-size:35px;
+							color:#fff;
+						}
+					}
+				}
+			}
+		}
+		.iron_sub03 {
+			margin-top:180px;
+		}
+	}
+
+	.product_section {
+		padding:7.4% 0; 
+		background-color: #000;
+		.heading {
+			font-size:50px;
+			font-weight: bold;
+			color:#fff;
+			text-align: center;
+			.more {
+				display: inline-block;
+				margin:0 auto;
+				font-size:20px;
+				color:#00b1e8;
+			}
+		}
+		.uc_flex {
+			margin-top:40px;
+			text-align: center;
+			.pimg {
+				text-align: center;
+			}
+			.p1 {
+				font-size:27px;
+				color:#fff;
+			}
+		}
+		.more {
+			padding:5px 25px;
+			margin-top:15px;
+			border:1px solid #00b1e8;
+			font-size:15px;
+			span {
+				font-size:15px;
+				color:#00b1e8;
 			}
 		}
 	}
