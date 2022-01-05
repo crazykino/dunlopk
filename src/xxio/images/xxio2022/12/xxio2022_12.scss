@@ -602,6 +602,50 @@ body *, body :before, body :after {
 			position:relative;
 			z-index: 1;
 		}
+		.heading {
+			padding-top:15%;
+			.ptit {
+				padding-left:50%;
+				font-size:115px;
+				font-weight: bold;
+				line-height:1.2;
+				color:#fff;
+				text-align: left;
+			}
+			.ptxt {
+				padding-top:30%;
+				font-size:55px;
+				font-weight: bold;
+				color:#fff;
+			}
+		}
+		.fairway_sub02 {
+			margin-top:125px;
+			.uc_flex {
+				margin-top:15px;
+				> div {
+					padding:30px;
+					&:first-of-type {
+						background-color: #474747;
+						p {
+							font-weight: bold;
+							font-size:17px;
+							line-height:1.8;
+							color:#fff;
+						}
+					}
+					&:last-of-type {
+						margin-left:15px;
+						border:1px solid #a1d3e9;
+						p {
+							font-weight: bold;
+							font-size:35px;
+							color:#fff;
+						}
+					}
+				}
+			}
+		}
 	}
 	
 }

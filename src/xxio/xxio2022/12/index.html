@@ -336,9 +336,27 @@
 					</div>
 				</section>
 
-
 				<section class="fairway_section">
 					<p class="headimg"><img src="../../images/xxio2022/12/fairway_top.png" alt="@"></p>
+					<div class="row fairway_sub01">
+						<div class="heading">
+							<p class="ptit right_to_left active">Fairway<br>Woods</p>
+							<p class="ptxt left_to_right active">‘ACTIVWING’과 ‘REBOUND FRAME’의<br>시너지로 쉽고 편하게 더 멀리</p>
+						</div>
+					</div>
+					<div class="row fairway_sub02">
+						<p class="ptit"><img src="../../images/xxio2022/12/tec_activ.png" alt="ActivWing"></p>
+						<div class="uc_flex">
+							<div>
+								<p>다운스윙 시에 발생하는 공기의 흐름을 컨트롤하여
+									헤드의 흔들림을 줄여주고 궤도에 따른 정확한 임팩트를
+									가능하게 하여 최대 헤드 스피드를 실현해줍니다.</p>
+							</div>
+							<div>
+								<p>에어로다이나믹 컨트롤로 정확한 임팩트</p>
+							</div>
+						</div>
+					</div>
 				</section>
 
 			</div>
@@ -638,7 +656,6 @@
 				}else {
 					$('.driver_section').removeClass('active');
 				}
-
 				if (checkVisible($('.driver_sub01'))&&!isVisible) {
 					$('.driver_sub01').find('p').addClass('active');
 
@@ -652,6 +669,19 @@
 				if (checkVisible($('.driver_sub04'))&&!isVisible) {
 					$('.driver_sub04').find('p').addClass('active');
 					
+					isVisible=true;
+				}
+
+				if (checkVisible($('.fairway_section'))&&!isVisible) {
+					$('.fairway_section').addClass('active');
+					
+					isVisible=true;
+				}else {
+					$('.driver_section').removeClass('active');
+				}
+				if (checkVisible($('.fairway_sub01'))&&!isVisible) {
+					$('.fairway_sub01').find('p').addClass('active');
+
 					isVisible=true;
 				}
 
