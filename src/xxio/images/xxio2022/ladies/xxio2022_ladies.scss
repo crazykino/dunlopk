@@ -276,10 +276,6 @@ body *, body :before, body :after {
 		background-color:#fee6f5;
 		border-top:15px solid #ff0071;
 		.headimg {
-			position:absolute;
-			left:0;
-			right:0;
-			top:140px;
 			width:100%;
 		}
 		.row {
@@ -287,7 +283,6 @@ body *, body :before, body :after {
 			z-index: 1;
 		}
 		.heading {
-			padding-top:15%;
 			.ptit {
 				font-size:115px;
 				font-weight: bold;
@@ -295,10 +290,10 @@ body *, body :before, body :after {
 				text-align: right;
 			}
 			.ptxt {
-				padding-top:35%;
-				font-size:55px;
+				font-size:50px;
 				font-weight: bold;
-				color:#fff;
+				line-height:1.3;
+				color:#000;
 				span {
 					display: block;
           margin-top:15px;
@@ -307,12 +302,36 @@ body *, body :before, body :after {
 				}
 			}
 		}
+		.titimg {
+			&.img01 {
+				max-width:750px;
+				margin:13% 0 0;
+			}
+			&.img02 {
+				max-width:900px;
+				margin-bottom:13%;
+			}
+		}
 		.driver_sub02 {
-			margin-top:130px;
+			margin-top:0px;
 			.pimg {
-				max-width:75%;
 				margin:0 auto;
-				padding-bottom:130px;
+				padding-bottom:140px;
+				text-align: center;
+				.clrtxt {
+					margin-bottom:-50px;
+				}
+			}
+			.clrtxt {
+				font-size:55px;
+				font-weight: bold;
+				color:#ff0071;
+				text-align: left;
+				span {
+					display: block;
+					font-size:27px;
+					font-weight: bold;
+				}
 			}
       .heading {
         padding-top:0;
@@ -320,79 +339,25 @@ body *, body :before, body :after {
         .ptxt {
           padding-top:0;
         }
+				span {
+					display: block;
+					font-weight: bold;
+				}
+				.sp1 {
+					font-size:27px;
+					color:#000;
+				}
+				.sp2 {
+					margin-top:0;
+					font-size:22px;
+					color:#535353;
+				}
       }
-		}
-		.driver_sub03 {
-			padding:5%;
-			border:1px solid #ffca2f;
 			.uc_flex {
-				margin-bottom:70px;
+				margin-top:80px;
 				> div {
-					&:first-of-type {
-						flex:.7;
-						font-weight: bold;
-						font-size:40px;
-						line-height:1.3;
-						color:#fff;
-					}
-					&:last-of-type {
-						flex:1.3;
-					}
-					dl {
-						&:last-of-type {
-							margin-top:15px;
-						}
-					}
-					dt {
-						font-weight: bold;
-						font-size:27px;
-						color:#ffca2f;
-					}
-					dd {
-						margin-top:5px;
-						font-weight: bold;
-						font-size:17px;
-						color:#fff;
-					}
-				}
-			}
-		}
-		.driver_sub04 {
-			.heading {
-				.ptxt {
-					padding-top:0;
-          font-size:48px;
-				}
-			}
-			.uc_flex {
-				margin-top:40px;
-				.pimg {
-					position:relative;
-					width:100%;
-					padding-bottom:80%;
 					text-align: center;
-					overflow: hidden;
-					img {
-						position:absolute;
-						left:50%;
-						top:50%;
-						-webkit-transform: translate(-50%, -50%); 
-						transform: translate(-50%, -50%);  
-					}
 				}
-				> div {
-					&:last-of-type {
-						.desc {
-							padding-left:10%;
-						}
-					}
-				}
-			}
-			.desc {
-				font-weight: bold;
-				font-size:23px;
-				line-height:1.3;
-				color:#ffc92e;
 			}
 		}
 		@media screen and (max-width:1280px) {
@@ -402,44 +367,18 @@ body *, body :before, body :after {
 				}
 				.ptxt {
 					font-size: 40px;
-				}
-			}
-			.driver_sub03 {
-				.uc_flex {
-					> div {
-						&:first-of-type {
-							font-size:30px;
-						}
-						dt {
-							font-size:21px;
-						}
-						dd {
-							font-size:14px;
-						}
-					}
-				}
-			}
-			.driver_sub04 {
-				.desc {
-					font-size:18px;
 				}
 			}
 		}
 	}
 	// .driver_section
 
-	.fairway_section {
+	.design_section {
 		position:relative;
 		min-height:100vh;
-		// padding-top:140px;
 		padding-bottom:10%;
-		background-color: #191919;
-		border-top:15px solid #ff0071;
+		background-color:#fee6f5;
 		.headimg {
-			position:absolute;
-			left:0;
-			right:0;
-			top:140px;
 			width:100%;
 		}
 		.row {
@@ -447,287 +386,54 @@ body *, body :before, body :after {
 			z-index: 1;
 		}
 		.heading {
-			padding-top:15%;
-			.ptit {
-				padding-left:50%;
-				font-size:115px;
-				font-weight: bold;
-				line-height:1.2;
-				color:#fff;
-				text-align: left;
-			}
-			.ptxt {
-				padding-top:30%;
-				font-size:55px;
-				font-weight: bold;
-				color:#fff;
-			}
-		}
-		.fairway_sub02 {
-			margin-top:125px;
-      .ptit {
-        img {
-          max-width:340px;
-        }
-      }
-			.uc_flex {
-				margin-top:15px;
-				> div {
-					padding:30px;
-					&:first-of-type {
-						background-color: #474747;
-						p {
-							font-weight: bold;
-							font-size:17px;
-							line-height:1.8;
-							color:#fff;
-						}
-					}
-					&:last-of-type {
-						margin-left:15px;
-						border:1px solid #a1d3e9;
-						p {
-							font-weight: bold;
-							font-size:35px;
-							color:#fff;
-						}
-					}
-				}
-			}
-		}
-		.fairway_sub03 {
-			margin-top:125px;
-      .ptit {
-        img {
-          max-width:470px;
-        }
-      }
-			.uc_flex {
-				margin-top:15px;
-				margin-bottom:50px;
-				> div {
-					flex:.5;
-					padding:30px;
-					&:first-of-type {
-						background-color: #474747;
-						p {
-							font-weight: bold;
-							font-size:17px;
-							line-height:1.8;
-							color:#fff;
-						}
-					}
-				}
-			}
-		}
-		.fairway_sub04 {
-			margin-top:170px;
-		}
-		@media screen and (max-width:1280px) {
-			.heading {
-				.ptit {
-					font-size:80px;
-				}
-				.ptxt {
-					font-size: 40px;
-				}
-			}
-			.fairway_sub02 {
-				.uc_flex {
-					> div {
-						&:last-of-type {
-							p {
-								font-size:28px;
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-	// .fairway_section
-
-	.hybrids_section {
-		position:relative;
-		min-height:100vh;
-		padding-top:140px;
-		padding-bottom:10%;
-		background-color: #191919;
-		border-top:15px solid #ff0071;
-		.headimg {
-			position:absolute;
-			left:0;
-			right:0;
-			top:140px;
-			width:100%;
-		}
-		.row {
-			position:relative;
-			z-index: 1;
-		}
-		.heading {
-			padding-top:15%;
 			.ptit {
 				font-size:115px;
 				font-weight: bold;
-				line-height:1.2;
 				color:#fff;
 				text-align: right;
 			}
 			.ptxt {
-				padding-top:30%;
 				font-size:55px;
 				font-weight: bold;
-				color:#fff;
-			}
-		}
-		.hybrids_sub02 {
-			margin-top:125px;
-      .ptit {
-        img {
-          max-width:340px;
-        }
-      }
-			.uc_flex {
-				margin-top:15px;
-				> div {
-					padding:30px;
-					&:first-of-type {
-						background-color: #474747;
-						p {
-							font-weight: bold;
-							font-size:17px;
-							line-height:1.8;
-							color:#fff;
-						}
-					}
-					&:last-of-type {
-						margin-left:15px;
-						border:1px solid #a1d3e9;
-						p {
-							font-weight: bold;
-							font-size:35px;
-							color:#fff;
-						}
-					}
-				}
-			}
-		}
-		@media screen and (max-width:1280px) {
-			.heading {
-				.ptit {
-					font-size:80px;
-				}
-				.ptxt {
-					font-size: 40px;
-				}
-			}
-			.hybrids_sub02 {
-				.uc_flex {
-					> div {
-						&:last-of-type {
-							p {
-								font-size:28px;
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-
-	.iron_section {
-		position:relative;
-		min-height:100vh;
-		padding-top:140px;
-		padding-bottom:10%;
-		background-color: #191919;
-		border-top:15px solid #ff0071;
-		.headimg {
-			position:absolute;
-			left:0;
-			right:0;
-			top:140px;
-			width:100%;
-		}
-		.row {
-			position:relative;
-			z-index: 1;
-		}
-		.heading {
-			padding-top:15%;
-			.ptit {
-				font-size:115px;
-				font-weight: bold;
-				line-height:1.2;
-				color:#fff;
-				text-align: right;
-			}
-			.ptxt {
-				padding-top:30%;
-				font-size:55px;
-				font-weight: bold;
-				color:#fff;
-			}
-		}
-		.iron_sub02 {
-			margin-top:125px;
-			.desc {
-				margin-bottom:60px;
-				font-size:40px;
-				font-weight: bold;
-				color:#fff;
+				color:#000;
 				span {
 					display: block;
-					margin-top:15px;
-					font-size:17px;
+          margin-top:15px;
+					font-size:27px;
 					color:#fff;
 				}
 			}
-			.pimg {
-				&:last-of-type {
-					margin-top:-14%;
-				}
-			}
-			.uc_flex {
-				margin-top:15px;
-				> div {
-					padding:30px;
-					&:first-of-type {
-						background-color: #474747;
-						p {
-							font-weight: bold;
-							font-size:17px;
-							line-height:1.8;
-							color:#fff;
-						}
-					}
-					&:last-of-type {
-						margin-left:15px;
-						border:1px solid #a1d3e9;
-						p {
-							font-weight: bold;
-							font-size:35px;
-							color:#fff;
-						}
-					}
-				}
-			}
 		}
-		.iron_sub03 {
-			margin-top:180px;
-		}
-		@media screen and (max-width:1280px) {
+		.design_sub01 {
 			.heading {
-				.ptit {
-					font-size:80px;
+        padding-top:0;
+        margin-bottom:-16%;
+        .ptxt {
+          padding-top:0;
+        }
+				span {
+					display: block;
+					font-weight: bold;
 				}
-				.ptxt {
-					font-size: 40px;
+				.sp1 {
+					font-size:27px;
+					color:#000;
 				}
+				.sp2 {
+					margin-top:0;
+					font-size:22px;
+					color:#535353;
+				}
+      }
+		}
+		.design_sub02 {
+			.pimg {
+				max-width:730px;
+				margin:0 auto 100px;
 			}
 		}
 	}
+	// design_section
 
 	.product_section {
 		padding:7.4% 0; 
@@ -737,11 +443,16 @@ body *, body :before, body :after {
 			font-weight: bold;
 			color:#fff;
 			text-align: center;
-			.more {
+			> p {
+				margin-top:-20px;
+				padding:0;
+			}
+			.btnmore {
 				display: inline-block;
 				margin:0 auto;
+				border:0;
 				font-size:20px;
-				color:#00ff31;
+				color:#ff0071;
 			}
 		}
 		.uc_flex {
@@ -758,11 +469,11 @@ body *, body :before, body :after {
 		.more {
 			padding:5px 25px;
 			margin-top:15px;
-			border:1px solid #00ff31;
+			border:1px solid #ff0071;
 			font-size:15px;
 			span {
 				font-size:15px;
-				color:#00ff31;
+				color:#ff0071;
 			}
 		}
 

@@ -629,7 +629,7 @@ body *, body :before, body :after {
 					}
 					&:last-of-type {
 						margin-left:15px;
-						border:1px solid #a1d3e9;
+						border:1px solid #fff;
 						p {
 							font-weight: bold;
 							font-size:35px;
@@ -747,7 +747,7 @@ body *, body :before, body :after {
 					}
 					&:last-of-type {
 						margin-left:15px;
-						border:1px solid #a1d3e9;
+						border:1px solid #fff;
 						p {
 							font-weight: bold;
 							font-size:35px;
@@ -898,15 +898,15 @@ body *, body :before, body :after {
 				font-size:27px;
 				color:#fff;
 			}
-		}
-		.more {
-			padding:5px 25px;
-			margin-top:15px;
-			border:1px solid #00ff31;
-			font-size:15px;
-			span {
+			.more {
+				padding:5px 25px;
+				margin-top:15px;
+				border:1px solid #00ff31;
 				font-size:15px;
-				color:#00ff31;
+				span {
+					font-size:15px;
+					color:#00ff31;
+				}
 			}
 		}
 

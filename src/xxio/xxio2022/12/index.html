@@ -230,13 +230,10 @@
 			<link href="../../images/xxio2022/12/xxio2022_12.css" rel="stylesheet">
 			<div class="xxio2022_content">
 				<section class="top_section">
-					<p class="dunlop_logo"><img src="../../images/xxio2022/dunlop_logo_white.svg" alt="" /></p>
+					<p class="dunlop_logo"><img src="../../images/xxio2022/dunlop_logo_white.svg" class="imgLoaded" alt="" /></p>
           <div class="top_section_in">
             <div class="cont">
-              <p class="main_p"><img src="../../images/xxio2022/12/top_p1.png"></p>
-              <p class="main_logo"><img src="../../images/xxio2022/12/top_12_logo.png"></p>
-              <p class="main_text">영 리 하 게, 위 대 하 게</p>
-              <p class="bg_mask"><img src="../../images/xxio2022/12/top_bg.png" alt=""></p>
+              <p class="bg_mask"><img src="../../images/xxio2022/12/top_bg.png" alt="영 리 하 게, 위 대 하 게"></p>
             </div>
             <iframe class="bg_movie" id="top_bg_movie" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="640" height="360" src="https://www.youtube.com/embed/54fSnxrwXcw?playsinline=1&amp;width=1680&amp;height=949&amp;loop=1&amp;listType=playlist&amp;playlist=54fSnxrwXcw&amp;rel=0&amp;controls=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fsports.dunlop.co.jp&amp;widgetid=1" data-gtm-yt-inspected-1_19="true"></iframe>
           </div>
@@ -340,23 +337,23 @@
 					<p class="headimg"><img src="../../images/xxio2022/12/fairway_top.png" alt="@"></p>
 					<div class="row fairway_sub01">
 						<div class="heading">
-							<p class="ani ptit right_to_left active">Fairway<br>Woods</p>
-							<p class="ani ptxt left_to_right active">‘ACTIVWING’과 ‘REBOUND FRAME’의<br>시너지로 쉽고 편하게 더 멀리</p>
+							<p class="ani ptit right_to_left">Fairway<br>Woods</p>
+							<p class="ani ptxt left_to_right">‘ACTIVWING’과 ‘REBOUND FRAME’의<br>시너지로 쉽고 편하게 더 멀리</p>
 						</div>
 					</div>
 					<div class="row fairway_sub02">
 						<p class="ptit"><img src="../../images/xxio2022/12/tec_activ.png" alt="ActivWing"></p>
 						<div class="uc_flex">
-							<div class="ani left_to_right active">
+							<div class="ani left_to_right">
 								<p>다운스윙 시에 발생하는 공기의 흐름을 컨트롤하여
 									헤드의 흔들림을 줄여주고 궤도에 따른 정확한 임팩트를
 									가능하게 하여 최대 헤드 스피드를 실현해줍니다.</p>
 							</div>
-							<div class="ani right_to_left active">
+							<div class="ani right_to_left">
 								<p>에어로다이나믹 컨트롤로 정확한 임팩트</p>
 							</div>
 						</div>
-						<p class="ani bottom_to_top active"><img src="../../images/xxio2022/12/fairway_img01.png" alt="@"></p>
+						<p class="ani bottom_to_top"><img src="../../images/xxio2022/12/fairway_img01.png" alt="@"></p>
 					</div>
 					<div class="row fairway_sub03">
 						<p class="ptit"><img src="../../images/xxio2022/12/tec_rebound.png" alt="ActivWing"></p>
@@ -408,8 +405,8 @@
 					<p class="headimg"><img src="../../images/xxio2022/12/iron_top.png" alt="@"></p>
 					<div class="row iron_sub01">
 						<div class="heading">
-							<p class="ptit right_to_left active">Irons</p>
-							<p class="ptxt left_to_right active">시리즈 최고의 스피드를 실현하는<br>반발성능의 진화</p>
+							<p class="ptit right_to_left">Irons</p>
+							<p class="ptxt left_to_right">시리즈 최고의 스피드를 실현하는<br>반발성능의 진화</p>
 						</div>
 					</div>
 					<div class="row iron_sub02">
@@ -723,117 +720,105 @@
 
 		<!-- 202201 xxio2022 -->
 		<script>
-			$(function () {
-				var lastSt = 0;
-				$(window).scroll(function (e) {
-					var stop = $(this).scrollTop();
-					if(stop < 10) {
-						$('.animate.slideUp').removeClass('slideUp')
+			$(function(){
+				var device = (function () {
+					var ua = navigator.userAgent;
+					if (ua.indexOf('iPhone') > 0 || ua.indexOf('iPod') > 0 || ua.indexOf('Android') > 0 && ua.indexOf(
+							'Mobile') > 0) {
+						return 'sp';
+					} else if (ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0) {
+						return 'tab';
+					} else {
+						return 'other';
 					}
+				})();
+
+				function imgLoaded(callback) {
+					var img_count = $('.imgLoaded').length;
+					var loaded_count = 0;
+					$('.imgLoaded').each(function () {
+						var img = new Image();
+						var src = $(this).attr('src');
+						if (src) {
+							img.src = src;
+							img.onload = function () {
+								loaded_count++;
+								if (img_count == loaded_count) {
+									callback();
+								}
+							}
+						} else {
+							var src = $(this).css('background-image').replace(/^url\(/, "").replace(/\)$/, "").replace(/"/g, "");
+							img.src = src;
+							img.onload = function () {
+								loaded_count++;
+								if (img_count == loaded_count) {
+									callback();
+								}
+							}
+						}
+					});
+				}
+
+				imgLoaded(function () {
+					var loaded_id = setTimeout(function () {
+						// $('.loading').addClass('loaded');
+						anim();
+						animLoaded();
+						$(window).scroll(function (e) {
+							anim();
+						});
+					}, 1000);
 				});
-			})
-			// scroll animate
-			var isVisible = false;
-			var lastScrollTop = 0;
-			$(window).on('scroll',function() {
-				var st = $(this).scrollTop();
-				var wh = $(window).height();
-				isVisible=false;
-
-				if(st < wh) {
-						$('section').removeClass('active')
+				var loaded_flag = false;
+				function animLoaded() {
+					if (loaded_flag == false) {
+						$('.loaded').each(function () {
+							$(this).addClass('active');
+						});
 					}
+				}
+				function anim() {
+					$(".growfadein,.bg_black_amin,.countup,.left_to_wide,.anim_img,.show_text,.showup,.show_anim,.graph_amin,.content_nav,.takahash_link,.left_to_right,.right_to_left,.top_to_bottom,.bottom_to_top,.spin_images,.scale_bg")
+					.each(function () {
+						var imgPos = $(this).offset().top;
+						var scroll = $(window).scrollTop();
+						var windowHeight = $(window).height();
 
-        if (checkVisible($('.debut_section'))&&!isVisible) {
-					$('.debut_section').addClass('active');
-					$('.debut_section .products_flex').find('.growfadein').addClass('active');
-					
-					isVisible=true;
-				}
-				if (checkVisible($('.debut_section .products'))&&!isVisible) {
-					$('.debut_section .uc_flex').addClass('active');
-					$('.debut_section .products_bottom, .debut_section .right_to_left').addClass('active');
-					
-					isVisible=true;
-				}
+						if (device == 'other') {
+							if (scroll > imgPos - windowHeight) {
+								countup($(this));
+								$(this).addClass('active');
+							} else {
+								$(this).removeClass('active');
+							}
+						} else {
+							if (scroll > imgPos - windowHeight - 100) {
+								countup($(this));
+								$(this).addClass('active');
+							} else {
 
-				if (checkVisible($('.tec_section'))&&!isVisible) {
-					$('.tec_section').addClass('active');
-					$('.tec_section').find('.uc_flex > div').addClass('active');
-					
-					isVisible=true;
-				}
-
-				if (checkVisible($('.driver_section'))&&!isVisible) {
-					$('.driver_section').addClass('active');
-					
-					isVisible=true;
-				}
-				if (checkVisible($('.driver_sub01'))&&!isVisible) {
-					$('.driver_sub01').find('p').addClass('active');
-
-					isVisible=true;
-				}
-				if (checkVisible($('.driver_sub02'))&&!isVisible) {
-					$('.driver_sub02').find('.pimg').addClass('active');
-					
-					isVisible=true;
-				}
-				if (checkVisible($('.driver_sub04'))&&!isVisible) {
-					$('.driver_sub04').find('p').addClass('active');
-
-					isVisible=true;
+								$(this).removeClass('active');
+							}
+						}
+					});
 				}
 
-				if (checkVisible($('.fairway_section'))&&!isVisible) {
-					$('.fairway_section').addClass('active');
-					
-					isVisible=true;
+				function countup(target) {
+					if (target.hasClass('countup') && !target.hasClass('active')) {
+						console.log(target);
+						$(target).prop('c', 0).animate({
+							c: $(target).text()
+						}, {
+							duration: 1500,
+							easing: 'linear',
+							step: function (now) {
+								$(target).text(Math.ceil(now));
+							}
+						});
+					}
 				}
-				if (checkVisible($('.fairway_sub03'))&&!isVisible) {
-					$('.fairway_sub03').find('.ani').addClass('active');
-
-					isVisible=true;
-				}
-				if (checkVisible($('.fairway_sub04'))&&!isVisible) {
-					$('.fairway_sub04').find('.ani').addClass('active');
-
-					isVisible=true;
-				}
-
-				if (checkVisible($('.hybrids_section'))&&!isVisible) {
-					$('.hybrids_section').addClass('active');
-					$('.hybrids_sub01').find('.ani').addClass('active');
-					
-					isVisible=true;
-				}
-				if (checkVisible($('.hybrids_sub02'))&&!isVisible) {
-					$('.hybrids_sub02').find('.ani').addClass('active');
-
-					isVisible=true;
-				}
-
-				if (checkVisible($('.iron_section'))&&!isVisible) {
-					$('.iron_section').addClass('active');
-					
-					isVisible=true;
-				}
-				if (checkVisible($('.iron_sub03'))&&!isVisible) {
-					$('.iron_sub03').find('.ani').addClass('active');
-
-					isVisible=true;
-				}
-
-				lastSt = st;
 			});
-		var checkVisible = function(elem){
-			var docViewTop = $(window).scrollTop() + 200,
-				docViewBottom = docViewTop + $(window).height(),
-				elemTop = $(elem).offset().top,
-				elemBottom = elemTop + $(elem).height();
-
-			return ((elemTop + ((elemBottom - elemTop)/2)) >= docViewTop && ((elemTop + ((elemBottom - elemTop)/2)) <= docViewBottom));
-		}
 		</script>
 		<!--// 202201 xxio2022 -->
 
