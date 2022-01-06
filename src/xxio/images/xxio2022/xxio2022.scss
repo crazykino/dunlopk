@@ -754,6 +754,7 @@ body *, body :before, body :after {
 
 @media screen and (max-width:1024px) {
 	.xxio2022_content {
+		padding-top:109px;
 		._mo {display: block;}
 		._pc {display: none;}
 		section:not(.top_section) {
@@ -813,6 +814,7 @@ body *, body :before, body :after {
 				font-size:24px;
 			}
 			.p2 {
+				padding:0 10%;
 				font-size:14px;
 			}
 			.uc_flex {
@@ -847,12 +849,15 @@ body *, body :before, body :after {
 					height:30px;
 				}
 			}
+			.f_yellow {
+				max-width:80%;
+			}
 		}
 		// 
 
 		.wing_section {
 			background-size:60%;
-			background-position: right center;
+			background-position: right top 40%;
 			.p1 {
 				margin-top:20px;
 				font-size:24px;
@@ -862,6 +867,7 @@ body *, body :before, body :after {
 				font-size:12px;
 			}
 			.pimg {
+				width:80%;
 				max-width:330px;
 			}
 			.more {
@@ -886,7 +892,7 @@ body *, body :before, body :after {
 			}
 			.uc_flex {
 				p {
-					font-size:24px;
+					font-size:22px;
 				}
 				span {
 					font-size:12px;
@@ -914,12 +920,13 @@ body *, body :before, body :after {
 			}
 			.heading {
 				img {
+					width:80%;
 					max-width:340px;
 				}
 			}
 			.uc_flex {
 				p {
-					font-size:24px;
+					font-size:22px;
 				}
 				span {
 					font-size:12px;
@@ -965,8 +972,6 @@ body *, body :before, body :after {
 				font-size:12px;
 			}
 		}
-
-
 	}
 }
 

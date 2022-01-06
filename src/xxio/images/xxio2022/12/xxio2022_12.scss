@@ -981,5 +981,126 @@ body *, body :before, body :after {
 			}
 		}
 	}
-	
+}
+
+@media screen and (max-width:1024px) {
+	.xxio2022_content {
+		padding-top:109px;
+		._mo {display: block;}
+		._pc {display: none;}
+		section:not(.top_section) {
+			padding-top:70px;
+			padding-bottom:70px;
+		}
+		.row {
+			padding-left:15px;
+			padding-right:15px;
+			padding-top:0 !important;
+		}
+		.debut_section {
+			.row {
+				padding-bottom:0;
+			}
+			.products_flex {
+				width:100%;
+			}
+			.products_links {
+				> div {
+					p {
+						max-width:130px;
+						min-width:130px;
+					}
+				}
+			}
+		}
+		// 
+		.tec_section {
+			background-color:#0a0b0b;
+			background-size:100%;
+			background-image: url('./m_tech_bg.png');
+			background-position:center bottom;
+			.row {
+				position: relative;
+				p {
+					padding-left: 15px;
+					padding-right: 15px;
+					font-size: 24px;
+				}
+				.p2 {
+					padding:0 10%;
+					font-size:14px;
+				}
+				.uc_flex {
+					display: block;
+					background-size:25px;
+					> div {
+						padding:20px;
+						margin-left:0 !important;
+						background-color: rgba(0,0,0, .2);
+						img {
+							max-width:80%;
+						}
+						&:last-of-type {
+							margin-top:60px;
+						}
+					}
+					p {
+						font-size:22px;
+					}
+					span {
+						font-size:13px;
+					}
+				}
+			}
+			.more {
+				position:relative;
+				bottom:inherit;
+				left:inherit;
+				margin:55% auto 0;
+				display: block;
+				width:190px;
+			}
+		}
+		// 
+		.driver_section {
+			border-top-width: 7px;
+			.headimg {
+				left:50%;
+				top:70px;
+				-webkit-transform: translateX(-50%); 
+				transform: translateX(-50%);  
+				width:160%;
+			}
+			.heading {
+				.ptit {
+					font-size:50px;
+				}
+				.ptxt {
+					font-size:24px;
+				}
+			}
+			.driver_sub02 {
+				.pimg {
+					max-width:100%;
+					padding-bottom:75px;
+				}
+			}
+			.driver_sub03 .uc_flex {
+				padding:15px 0;
+				margin-bottom:30px;
+				> div {
+					flex:1 !important;
+					dt {
+						font-size: 16px;
+					}
+					dd {
+						font-size:10px;
+					}
+				}
+			}
+		}	
+		// 
+
+
+	}
 }
