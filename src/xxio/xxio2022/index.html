@@ -233,7 +233,7 @@
 					<div class="video">
 						<button class="btn_play btnplay" onclick="playPauseMedia(this)"><span class="a11y">play</span></button>
 						<video muted="muted" onloadedmetadata="this.muted = true" poster="../images/xxio2022/xxio2022_introbg.jpg" autoplay playsinline>
-							<source src="../images/xxio2022/top_vod.mp4" type="video/mp4">
+							<source src="https://www.xxio.co.kr/images/video/XXIO_Adptation_Main.mp4" type="video/mp4">
 						</video>
 					</div>
 				</section>
@@ -248,11 +248,11 @@
 							<div class="products_links">
 								<div class="uc_flex left_to_right">
 									<p><img src="../images/xxio2022/new_x_logo.png" alt="" /></p>
-									<a href="./eks/"><span>&lt; &nbsp;XXIO X VIEW MORE</span></a>
+									<a href="./eks/" class="more"><span>&lt; &nbsp;XXIO X VIEW MORE</span></a>
 								</div>
 								<div class="uc_flex right_to_left">
 									<p><img src="../images/xxio2022/new_12_logo.png" alt="" /></p>
-									<a href="./12/"><span>XXIO 12 VIEW MORE &nbsp;&gt;</span></a>
+									<a href="./12/" class="more"><span>XXIO 12 VIEW MORE &nbsp;&gt;</span></a>
 								</div>
 							</div>
 							<div class="products_bottom growfadein">
@@ -298,9 +298,10 @@
 						</a>
 					</div>
 					<div class="video">
-						<video muted="muted" onloadedmetadata="this.muted = true" poster="../images/xxio2022/movie_bg.jpg" playsinline>
+						<iframe class="iframe_wrap" id="iframe_wrap1" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="640" height="360" src="https://www.youtube.com/embed/XrFAo_-0ERU?playsinline=1&amp;width=1680&amp;height=944&amp;loop=1&amp;listType=playlist&amp;playlist=XrFAo_-0ERU&amp;rel=0&amp;controls=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fsports.dunlop.co.jp&amp;widgetid=1" data-gtm-yt-inspected-1_19="true"></iframe>
+						<!-- <video muted="muted" onloadedmetadata="this.muted = true" poster="../images/xxio2022/movie_bg.jpg" playsinline>
 							<source src="../images/xxio2022/xxio2022_vod01.mp4" type="video/mp4">
-						</video>
+						</video> -->
 					</div>
 				</section>
 
@@ -332,9 +333,10 @@
 						</a>
 					</div>
 					<div class="video">
-						<video muted="muted" onloadedmetadata="this.muted = true" poster="../images/xxio2022/movie_bg.jpg" playsinline>
+						<iframe class="iframe_wrap" id="iframe_wrap2" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="640" height="360" src="https://www.youtube.com/embed/ztPufByEOYA?playsinline=1&amp;width=1680&amp;height=944&amp;loop=1&amp;listType=playlist&amp;playlist=ztPufByEOYA&amp;rel=0&amp;controls=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fsports.dunlop.co.jp&amp;widgetid=2" data-gtm-yt-inspected-1_19="true"></iframe>
+						<!-- <video muted="muted" onloadedmetadata="this.muted = true" poster="../images/xxio2022/movie_bg.jpg" playsinline>
 							<source src="../images/xxio2022/xxio2022_vod02.mp4" type="video/mp4">
-						</video>
+						</video> -->
 					</div>
 				</section>
 
@@ -383,9 +385,10 @@
 						</a>
 					</div>
 					<div class="video">
-						<video muted="muted" onloadedmetadata="this.muted = true" poster="../images/xxio2022/movie_bg.jpg" playsinline>
+						<iframe class="iframe_wrap" id="iframe_wrap3" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="640" height="360" src="https://www.youtube.com/embed/TRDPuvcwx_U?playsinline=1&amp;width=1680&amp;height=944&amp;loop=1&amp;listType=playlist&amp;playlist=TRDPuvcwx_U&amp;rel=0&amp;controls=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fsports.dunlop.co.jp&amp;widgetid=3" data-gtm-yt-inspected-1_19="true"></iframe>
+						<!-- <video muted="muted" onloadedmetadata="this.muted = true" poster="../images/xxio2022/movie_bg.jpg" playsinline>
 							<source src="../images/xxio2022/xxio2022_vod03.mp4" type="video/mp4">
-						</video>
+						</video> -->
 					</div>
 				</section>
 
@@ -777,42 +780,42 @@
 				}
 			}
 			
-			var lastSt = 0;
-			var isVisible = false;
-			$(window).on('scroll', function() {
-				var st = $(this).scrollTop();
+			// var lastSt = 0;
+			// var isVisible = false;
+			// $(window).on('scroll', function() {
+			// 	var st = $(this).scrollTop();
 
-				$('.movie_section').find('video').get(0).pause();
-				isVisible=false;
+			// 	$('.movie_section').find('video').get(0).pause();
+			// 	isVisible=false;
 
-				if (checkVisible($('.movie_sec01'))&&!isVisible) {	
-					if($('.movie_sec01').find('video').length > 0) {
-						$('.movie_sec01').find('video').get(0).play();
-					}
-					isVisible=true;
-				}
-				if (checkVisible($('.movie_sec02'))&&!isVisible) {	
-					if($('.movie_sec02').find('video').length > 0) {
-						$('.movie_sec02').find('video').get(0).play();
-					}
-					isVisible=true;
-				}
-				if (checkVisible($('.movie_sec03'))&&!isVisible) {	
-					if($('.movie_sec03').find('video').length > 0) {
-						$('.movie_sec03').find('video').get(0).play();
-					}
-					isVisible=true;
-				}
-				lastSt = st;
-			});
-			var checkVisible = function(elem){
-				var docViewTop = $(window).scrollTop() + 200,
-					docViewBottom = docViewTop + $(window).height(),
-					elemTop = $(elem).offset().top,
-					elemBottom = elemTop + $(elem).height();
+			// 	if (checkVisible($('.movie_sec01'))&&!isVisible) {	
+			// 		if($('.movie_sec01').find('video').length > 0) {
+			// 			$('.movie_sec01').find('video').get(0).play();
+			// 		}
+			// 		isVisible=true;
+			// 	}
+			// 	if (checkVisible($('.movie_sec02'))&&!isVisible) {	
+			// 		if($('.movie_sec02').find('video').length > 0) {
+			// 			$('.movie_sec02').find('video').get(0).play();
+			// 		}
+			// 		isVisible=true;
+			// 	}
+			// 	if (checkVisible($('.movie_sec03'))&&!isVisible) {	
+			// 		if($('.movie_sec03').find('video').length > 0) {
+			// 			$('.movie_sec03').find('video').get(0).play();
+			// 		}
+			// 		isVisible=true;
+			// 	}
+			// 	lastSt = st;
+			// });
+			// var checkVisible = function(elem){
+			// 	var docViewTop = $(window).scrollTop() + 200,
+			// 		docViewBottom = docViewTop + $(window).height(),
+			// 		elemTop = $(elem).offset().top,
+			// 		elemBottom = elemTop + $(elem).height();
 
-				return ((elemTop + ((elemBottom - elemTop)/2)) >= docViewTop && ((elemTop + ((elemBottom - elemTop)/2)) <= docViewBottom));
-			}
+			// 	return ((elemTop + ((elemBottom - elemTop)/2)) >= docViewTop && ((elemTop + ((elemBottom - elemTop)/2)) <= docViewBottom));
+			// }
 		</script>
 		<!--// 202201 xxio2022 -->
 
