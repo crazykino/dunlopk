@@ -237,16 +237,17 @@
 						<div class="cont">
 							<p class="bg_mask"><img src="../../images/xxio2022/ladies/top_bg.png" alt="비거리의 날개를 달다"></p>
 						</div>
-						<iframe class="bg_movie" id="top_bg_movie" frameborder="0" allowfullscreen="1"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-							title="YouTube video player" width="640" height="360"
-							src="https://www.youtube.com/embed/54fSnxrwXcw?playsinline=1&amp;width=1680&amp;height=949&amp;loop=1&amp;listType=playlist&amp;playlist=54fSnxrwXcw&amp;rel=0&amp;controls=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fsports.dunlop.co.jp&amp;widgetid=1"
-							data-gtm-yt-inspected-1_19="true"></iframe>
+						<div class="bg_movie">
+							<video muted="muted" onloadedmetadata="this.muted = true" poster="../../images/xxio2022/12/xxio2022_introbg.jpg" playsinline>
+								<source src="../../images/xxio2022/top_vod.mp4" type="video/mp4">
+							</video>
+						</div>
 					</div>
 				</section>
 
 				<section class="debut_section">
-					<p><img src="../../images/xxio2022/ladies/new_bg.jpg" alt="@"></p>
+					<p class="_pc"><img src="../../images/xxio2022/ladies/new_bg.jpg" alt="@"></p>
+					<p class="_mo"><img src="../../images/xxio2022/ladies/m_new_bg.jpg" alt="@"></p>
 					<div class="products_bottom growfadein">
 						<p><img src="../../images/xxio2022/ladies/new_model.png" alt="2022 NEW MODEL"></p>
 					</div>
@@ -255,15 +256,14 @@
 				<section class="driver_section">
 					<div class="row driver_sub01">
 						<div class="heading">
-							<p class="ptxt left_to_right">‘ACTIVWING’과 ‘REBOUND FRAME’을
-								탑재한, 젝시오 레이디스 전용 설계!<br>
-								편안한 스윙으로 최대 비거리 실현!</span></p>
+							<p class="ptxt left_to_right">‘ACTIVWING’과 ‘REBOUND FRAME’을 탑재한, <br>젝시오 레이디스 전용 설계!<br>편안한 스윙으로 최대 비거리 실현!</span></p>
 						</div>
 					</div>
 					<div class="row">
 						<p class="titimg img01"><img src="../../images/xxio2022/ladies/tec_activ.png" alt="ActivWing"></p>
 					</div>
-					<p class="headimg"><img src="../../images/xxio2022/ladies/driver_top.png" alt="@"></p>
+					<p class="headimg _pc"><img src="../../images/xxio2022/ladies/driver_top.png" alt="@"></p>
+					<p class="headimg _mo"><img src="../../images/xxio2022/ladies/m_driver_top.png" alt="@"></p>
 					<div class="row driver_sub02">
 						<p class="titimg img02"><img src="../../images/xxio2022/ladies/tec_rebound.png" alt="REBOUND FRAME"></p>
 						<p class="pimg right_to_left"><img src="../../images/xxio2022/ladies/driver_img01.png" alt="@"></p>
@@ -299,7 +299,11 @@
 							</p>
 						</div>
 					</div>
-					<p class="headimg"><img src="../../images/xxio2022/ladies/products_top.png" alt="@"></p>
+					<p class="headimg _pc"><img src="../../images/xxio2022/ladies/products_top.png" alt="@"></p>
+					<p class="headimg _mo">
+						<span><img src="../../images/xxio2022/ladies/m_products_top01.jpg" alt="@"></span>
+						<span><img src="../../images/xxio2022/ladies/m_products_top02.jpg" alt="@"></span>
+					</p>
 					<div class="row design_sub02">
 						<p class="pimg bottom_to_top"><img src="../../images/xxio2022/ladies/products_simg01.png" alt="고급스러운 컬러에 심플하고 깔끔한 디자인"></p>
 						<p class="pimg bottom_to_top"><img src="../../images/xxio2022/ladies/products_simg02.png" alt="국내 골퍼의 감성에 맞춘 한국 전용 젝시오 레이디스 샤프트 디자인"></p>
@@ -695,7 +699,34 @@
 						});
 					}
 				}
+				if($('.top_section').find('video').length > 0) {
+					$('.top_section').find('video').get(0).play();
+				}
 			});
+			var lastSt = 0;
+			var isVisible = false;
+			$(window).on('scroll', function() {
+				var st = $(this).scrollTop();
+
+				$('.top_section').find('video').get(0).pause();
+				isVisible=false;
+
+				if (checkVisible($('.top_section'))&&!isVisible) {	
+					if($('.top_section').find('video').length > 0) {
+						$('.top_section').find('video').get(0).play();
+					}
+					isVisible=true;
+				}
+				lastSt = st;
+			});
+			var checkVisible = function(elem){
+				var docViewTop = $(window).scrollTop() + 200,
+					docViewBottom = docViewTop + $(window).height(),
+					elemTop = $(elem).offset().top,
+					elemBottom = elemTop + $(elem).height();
+
+				return ((elemTop + ((elemBottom - elemTop)/2)) >= docViewTop && ((elemTop + ((elemBottom - elemTop)/2)) <= docViewBottom));
+			}
 		</script>
 		<!--// 202201 xxio2022 -->
 

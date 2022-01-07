@@ -38,6 +38,11 @@ body *, body :before, body :after {
 			padding-right:30px;
 		}
 	}
+
+	.btnplay {
+		display: block;
+		cursor: pointer;
+	}
 	.btn_play {
 		position:absolute;
 		left:50%;
@@ -448,6 +453,29 @@ body *, body :before, body :after {
 				vertical-align: middle;
 			}
 		}
+		.video {
+			position:absolute;
+			left:0;
+			top:0;
+			right:0;
+			width:100%;
+			padding-bottom:40%;
+			background-color: #000;
+			&::before {
+				content: '';
+				display: block;
+				position:absolute;
+				left:0;
+				top:0;
+				width:100%;
+				height:100%;
+				background-color: rgba(0,0,0, .4);
+			}
+			video {
+				width:100%;
+				height:100%;
+			}
+		}
 		@media screen and (max-width:1240px) {
 			.f_yellow {
 				max-width:510px;
@@ -760,6 +788,10 @@ body *, body :before, body :after {
 		section:not(.top_section) {
 			padding-top:70px;
 			padding-bottom:70px;
+		}
+		.btn_play {
+			width:40px;
+			height:40px;
 		}
 		.row {
 			padding-left:15px;

@@ -235,12 +235,17 @@
             <div class="cont">
               <p class="bg_mask"><img src="../../images/xxio2022/eks/top_bg.png" alt="영 리 하 게, 위 대 하 게"></p>
             </div>
-            <iframe class="bg_movie" id="top_bg_movie" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="640" height="360" src="https://www.youtube.com/embed/54fSnxrwXcw?playsinline=1&amp;width=1680&amp;height=949&amp;loop=1&amp;listType=playlist&amp;playlist=54fSnxrwXcw&amp;rel=0&amp;controls=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fsports.dunlop.co.jp&amp;widgetid=1" data-gtm-yt-inspected-1_19="true"></iframe>
+						<div class="bg_movie">
+							<video muted="muted" onloadedmetadata="this.muted = true" poster="../../images/xxio2022/12/xxio2022_introbg.jpg" playsinline>
+								<source src="../../images/xxio2022/top_vod.mp4" type="video/mp4">
+							</video>
+						</div>
           </div>
         </section>
 
         <section class="debut_section">
-          <p><img src="../../images/xxio2022/eks/new_bg.png" alt="@"></p>
+          <p class="_pc"><img src="../../images/xxio2022/eks/new_bg.png" alt="@"></p>
+          <p class="_mo"><img src="../../images/xxio2022/eks/m_new_bg.jpg" alt="@"></p>
           <div class="products_bottom growfadein">
             <p><img src="../../images/xxio2022/eks/new_model.png" alt="2022 NEW MODEL"></p>
           </div>
@@ -331,7 +336,7 @@
 					<div class="row fairway_sub01">
 						<div class="heading">
 							<p class="ani ptit right_to_left active">Fairway<br>Woods</p>
-							<p class="ani ptxt left_to_right active">‘ACTIVWING’과 ‘REBOUND FRAME’의<br>시너지로 쉽고 편하게 더 멀리</p>
+							<p class="ani ptxt left_to_right active">‘ACTIVWING’과 <span class="br"></span>‘REBOUND FRAME’의<br>시너지로 쉽고 편하게 더 멀리</p>
 						</div>
 					</div>
 					<div class="row fairway_sub02">
@@ -375,7 +380,7 @@
 					<div class="row hybrids_sub01">
 						<div class="heading">
 							<p class="ani ptit right_to_left">Hybrids</p>
-							<p class="ani ptxt left_to_right">‘ACTIVWING’과 ‘REBOUND FRAME’의<br>시너지로 쉽고 편하게 더 멀리</p>
+							<p class="ani ptxt left_to_right">‘ACTIVWING’과  <span class="br"></span>‘REBOUND FRAME’의<br>시너지로 쉽고 편하게 더 멀리</p>
 						</div>
 					</div>
 					<div class="row hybrids_sub02">
@@ -415,9 +420,11 @@
 					<div class="row iron_sub03">
 						<div class="uc_flex">
 							<div class="ani left_to_right">
+								<p class="m_txt">‘rebound frame’이<br>만들어내는 뛰어난 볼 스피드</p>
 								<p><img src="../../images/xxio2022/eks/iron_img03.png" alt="@"></p>
 							</div>
 							<div class="ani right_to_left">
+								<p class="m_txt">‘젝시오 테크놀로지’로<br>안정적 비거리와 방향성 구현</p>
 								<p><img src="../../images/xxio2022/eks/iron_img04.png" alt="@"></p>
 							</div>
 						</div>
@@ -811,7 +818,34 @@
 						});
 					}
 				}
+				if($('.top_section').find('video').length > 0) {
+					$('.top_section').find('video').get(0).play();
+				}
 			});
+			var lastSt = 0;
+			var isVisible = false;
+			$(window).on('scroll', function() {
+				var st = $(this).scrollTop();
+
+				$('.top_section').find('video').get(0).pause();
+				isVisible=false;
+
+				if (checkVisible($('.top_section'))&&!isVisible) {	
+					if($('.top_section').find('video').length > 0) {
+						$('.top_section').find('video').get(0).play();
+					}
+					isVisible=true;
+				}
+				lastSt = st;
+			});
+			var checkVisible = function(elem){
+				var docViewTop = $(window).scrollTop() + 200,
+					docViewBottom = docViewTop + $(window).height(),
+					elemTop = $(elem).offset().top,
+					elemBottom = elemTop + $(elem).height();
+
+				return ((elemTop + ((elemBottom - elemTop)/2)) >= docViewTop && ((elemTop + ((elemBottom - elemTop)/2)) <= docViewBottom));
+			}
 		</script>
 		<!--// 202201 xxio2022 -->
 
