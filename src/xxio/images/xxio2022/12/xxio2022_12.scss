@@ -245,6 +245,16 @@ body *, body :before, body :after {
       height: calc(100vw / (100 / 56.5));
       top: 0;
       left: 0;
+			&::before {
+				content: '';
+				display: block;
+				position:absolute;
+				left:0;
+				top:0;
+				width:100%;
+				height:100%;
+				background-color: rgba(0,175,232, .3);
+			}
 			video {
 				width:100%;
 				height:100%;
@@ -268,6 +278,8 @@ body *, body :before, body :after {
 
   .debut_section {
 		position:relative;
+		margin-top:-10px;
+		z-index: 1;
 		.row {
 			position: relative;
 			padding-top: 10%;
