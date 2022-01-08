@@ -785,7 +785,7 @@
 					}
 				}
 				function anim() {
-					$(".growfadein,.bg_black_amin,.countup,.left_to_wide,.anim_img,.show_text,.showup,.show_anim,.graph_amin,.content_nav,.takahash_link,.left_to_right,.right_to_left,.top_to_bottom,.bottom_to_top,.spin_images,.scale_bg")
+					$(".growfadein,.left_to_wide,.left_to_right,.right_to_left,.top_to_bottom,.bottom_to_top")
 					.each(function () {
 						var imgPos = $(this).offset().top;
 						var scroll = $(window).scrollTop();
@@ -800,10 +800,8 @@
 							}
 						} else {
 							if (scroll > imgPos - windowHeight - 100) {
-								countup($(this));
 								$(this).addClass('active');
 							} else {
-
 								$(this).removeClass('active');
 							}
 						}

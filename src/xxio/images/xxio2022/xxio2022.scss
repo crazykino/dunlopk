@@ -88,6 +88,7 @@ body *, body :before, body :after {
 			.layer_wrap {
 				max-width:1010px;
 				height:auto;
+				height:80%;
 				background-color: rgba(0,0,0, .9);
 				border:5px solid #bababa;
 				border-radius: 35px;
@@ -98,6 +99,7 @@ body *, body :before, body :after {
 			}
 			.uc_flex {
 				margin-bottom:40px;
+				align-items: center;
 				&:last-of-type {
 					margin-bottom:0;
 				}
@@ -125,6 +127,30 @@ body *, body :before, body :after {
 					justify-content: flex-end;
 					> p {
 						max-width:288px;
+					}
+				}
+			}
+			@media screen and (max-height:1100px) {
+				.uc_flex {
+					.desc {
+						> p {
+							font-size:28px;
+						}
+						> span {
+							margin-top:20px;
+							font-size:18px;
+						}
+					}
+					.figure {
+						> p {
+							max-width:55%;
+						}
+					}
+				}
+				.pimg {
+					max-width:90%;
+					margin:0 auto;
+					img {
 					}
 				}
 			}

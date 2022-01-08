@@ -485,10 +485,10 @@ body *, body :before, body :after {
 			margin-top:40px;
 			text-align: center;
 			.pimg {
-				height:330px;
+				height:17vw;
 				text-align: center;
-				img {
-					width:100%;
+				@media screen and (min-width:1920px) {
+					height:290px;
 				}
 			}
 			.p1 {
