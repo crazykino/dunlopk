@@ -284,15 +284,28 @@ body *, body :before, body :after {
     background-color: #000;
 		z-index: 1;
 		> p {
+			position: absolute;
+			top: 0;
+			left: 0;
 			width: 100%;
-			height: 100%;
+			height:100%;
 			img {
 				width:100%;
 			}
 		}
+		.products_flex {
+			width: 52vw;
+			margin: 0 auto;
+			padding-top:13.5%;
+			text-align: center;
+			> p {
+				padding: 0;
+				text-align: center;
+			}
+		}
 		.products_bottom {
       position:relative;
-      margin-top:3vw;
+      margin-top:10%;
 			text-align: center;
       z-index: 1;
       img {
@@ -447,7 +460,7 @@ body *, body :before, body :after {
 			z-index: 1;
 		}
 		.heading {
-			padding-top:15%;
+			padding-top:25%;
 			.ptit {
 				font-size:115px;
 				font-weight: bold;
@@ -591,7 +604,6 @@ body *, body :before, body :after {
 	.fairway_section {
 		position:relative;
 		min-height:100vh;
-		// padding-top:140px;
 		padding-bottom:10%;
 		background-color: #191919;
 		border-top:15px solid #00ff31;
@@ -607,7 +619,7 @@ body *, body :before, body :after {
 			z-index: 1;
 		}
 		.heading {
-			padding-top:15%;
+			padding-top:30%;
 			.ptit {
 				padding-left:50%;
 				font-size:115px;
@@ -726,7 +738,7 @@ body *, body :before, body :after {
 			z-index: 1;
 		}
 		.heading {
-			padding-top:15%;
+			padding-top:30%;
 			.ptit {
 				font-size:115px;
 				font-weight: bold;
@@ -815,7 +827,7 @@ body *, body :before, body :after {
 			z-index: 1;
 		}
 		.heading {
-			padding-top:15%;
+			padding-top:25%;
 			.ptit {
 				font-size:115px;
 				font-weight: bold;
@@ -970,8 +982,17 @@ body *, body :before, body :after {
 			.row {
 				padding-bottom:0;
 			}
+			> p {
+				position:relative;
+			}
 			.products_flex {
-				width:100%;
+				position:absolute;
+				left:50%;
+				top:0;
+				-webkit-transform: translate(-50%, 0); 
+				transform: translate(-50%, 0);  
+				width:83%;
+				padding-top:20%;
 			}
 			.products_links {
 				> div {
@@ -979,6 +1000,11 @@ body *, body :before, body :after {
 						max-width:130px;
 						min-width:130px;
 					}
+				}
+			}
+			.products_bottom {
+				> p {
+					max-width:320px;
 				}
 			}
 		}
@@ -990,22 +1016,26 @@ body *, body :before, body :after {
 			background-position:center bottom;
 			.row {
 				position: relative;
-				p {
-					padding-left: 15px;
-					padding-right: 15px;
-					font-size: 24px;
+				.p1 {
+					padding-left:15px;
+					padding-right:15px;
+					font-size:22px;
 				}
 				.p2 {
+					margin-top:25px;
 					padding:0 10%;
-					font-size:14px;
+					font-size:12px;
+					line-height:1.6;
 				}
 				.uc_flex {
 					display: block;
+					width:calc(100% - 80px);
+					margin:35px auto 0;
 					background-size:25px;
 					> div {
-						padding:20px;
+						padding:10px 20px 20px;
 						margin-left:0 !important;
-						background-color: rgba(0,0,0, .2);
+						background-color: rgba(0,0,0, .6);
 						img {
 							max-width:80%;
 						}
@@ -1014,10 +1044,10 @@ body *, body :before, body :after {
 						}
 					}
 					p {
-						font-size:22px;
+						font-size:16px;
 					}
 					span {
-						font-size:13px;
+						font-size:10px;
 					}
 				}
 			}
@@ -1027,34 +1057,36 @@ body *, body :before, body :after {
 				left:inherit;
 				margin:55% auto 0;
 				display: block;
-				width:160px;
-				font-size:12px;
+				width:140px;
+				font-size:10px;
 			}
 		}
 		// 
 		.driver_section {
 			border-top-width: 7px;
 			.headimg {
-				left:60%;
 				top:70px;
-				-webkit-transform: translateX(-50%); 
-				transform: translateX(-50%);  
-				width:200%;
 			}
 			.heading {
 				.ptit {
-					font-size:35px;
+					font-size:40px;
 				}
 				.ptxt {
-					font-size:20px;
+					font-size:22px;
 					span {
 						width:75%;
 						font-size:12px;
 					}
 				}
 			}
+			.driver_sub01 {
+				padding-left:30px;
+				padding-right:30px;
+			}
 			.driver_sub02 {
-				margin-top:40px;
+				padding-left:30px;
+				padding-right:30px;
+				margin-top:15px;
 				.pimg {
 					max-width:100%;
 					padding-bottom:30px;
@@ -1066,32 +1098,38 @@ body *, body :before, body :after {
 			.driver_sub03 {
 				margin-left:15px;
 				margin-right:15px;
-			}
-			.driver_sub03 .uc_flex {
-				padding:20px 0;
-				margin-bottom:30px;
-				> div {
-					flex:1 !important;
-					&:first-of-type {
-						font-size:24px;
-					}
-					dt {
-						font-size: 14px;
-					}
-					dd {
-						font-size:10px;
+				&.row {
+					padding-left:5%;
+					padding-right:5%;
+				}
+				.uc_flex {
+					padding:20px 0;
+					margin-bottom:30px;
+					> div {
+						flex:1 !important;
+						&:first-of-type {
+							font-size:22px;
+						}
+						dt {
+							font-size: 12px;
+						}
+						dd {
+							font-size:10px;
+						}
 					}
 				}
 			}
 			.driver_sub04 {
 				.heading {
+					padding-top:60px;
 					.ptxt {
 						width:80%;
-						font-size:24px;
+						font-size:22px;
 					}
 				}
 				.uc_flex {
 					display: block;
+					margin-top:20px;
 					> div {
 						display: flex;
 						align-items: center;
@@ -1115,8 +1153,8 @@ body *, body :before, body :after {
 				.desc {
 					flex:.9;
 					padding-left:0 !important;
-					font-size: 12px;
-					line-height:1.4;
+					font-size: 10px;
+					line-height:1.5;
 					color:#fff;
 				}
 			}
@@ -1125,22 +1163,27 @@ body *, body :before, body :after {
 		.fairway_section {
 			border-top-width: 7px;
 			.headimg {
-				left:60%;
 				top:70px;
-				-webkit-transform: translateX(-50%); 
-				transform: translateX(-50%);  
-				width:200%;
 			}
 			.heading {
 				.ptit {
-					padding-left:60%;
-					font-size:35px;
+					font-size:40px;
 				}
 				.ptxt {
-					font-size:20px;
+					font-size:22px;
+					span {
+						width:75%;
+						font-size:12px;
+					}
 				}
 			}
+			.fairway_sub01 {
+				padding-left:30px;
+				padding-right:30px;
+			}
 			.fairway_sub02 {
+				padding-left:30px;
+				padding-right:30px;
 				margin-top:60px;
 				.ptit {
 					max-width:60%;
@@ -1150,8 +1193,10 @@ body *, body :before, body :after {
 				}
 				.uc_flex {
 					> div {
+						display: flex;
 						padding:15px;
 						align-items: center;
+						justify-content: center;
 						&:first-of-type {
 							p {
 								font-size:10px;
@@ -1159,7 +1204,7 @@ body *, body :before, body :after {
 						}
 						&:last-of-type {
 							p {
-								font-size:14px;
+								font-size:12px;
 							}
 						}
 					}
@@ -1174,6 +1219,7 @@ body *, body :before, body :after {
 					}
 				}
 				.uc_flex {
+					margin-bottom:15px;
 					> div {
 						padding:15px;
 						align-items: center;
@@ -1209,21 +1255,27 @@ body *, body :before, body :after {
 		.hybrids_section {
 			border-top-width: 7px;
 			.headimg {
-				left:60%;
 				top:70px;
-				-webkit-transform: translateX(-50%); 
-				transform: translateX(-50%);  
-				width:200%;
 			}
 			.heading {
 				.ptit {
-					font-size:35px;
+					font-size:40px;
 				}
 				.ptxt {
-					font-size:20px;
+					font-size:22px;
+					span {
+						width:75%;
+						font-size:12px;
+					}
 				}
 			}
+			.hybrids_sub01 {
+				padding-left:30px;
+				padding-right:30px;
+			}
 			.hybrids_sub02 {
+				padding-left:30px;
+				padding-right:30px;
 				margin-top:60px;
 				.ptit {
 					max-width:60%;
@@ -1233,8 +1285,10 @@ body *, body :before, body :after {
 				}
 				.uc_flex {
 					> div {
+						display: flex;
 						padding:15px;
 						align-items: center;
+						justify-content: center;
 						&:first-of-type {
 							p {
 								font-size:10px;
@@ -1242,7 +1296,7 @@ body *, body :before, body :after {
 						}
 						&:last-of-type {
 							p {
-								font-size:14px;
+								font-size:12px;
 							}
 						}
 					}
@@ -1253,29 +1307,40 @@ body *, body :before, body :after {
 		.iron_section {
 			border-top-width: 7px;
 			.headimg {
-				left:60%;
 				top:70px;
-				-webkit-transform: translateX(-50%); 
-				transform: translateX(-50%);  
-				width:200%;
 			}
 			.heading {
 				.ptit {
-					font-size:35px;
+					font-size:40px;
 				}
 				.ptxt {
-					font-size:20px;
+					font-size:22px;
+					span {
+						width:75%;
+						font-size:12px;
+					}
 				}
 			}
+			.iron_sub01 {
+				padding-left:30px;
+				padding-right:30px;
+			}
 			.iron_sub02 {
-				margin-top:60px;
+				padding-left:30px;
+				padding-right:30px;
+				margin-top:20px;
 				.desc {
-					font-size:20px;
+					margin-bottom:30px;
+					font-size:12px;
 					span {
-						width:80%;
-						font-size:12px;
+						margin-top:5px;
+						font-size:10px;
 						word-break: keep-all;
 					}
+				}
+				.pimg {
+					margin-left:-15px;
+					margin-right:-15px;
 				}
 			}
 			.iron_sub03 {
@@ -1304,18 +1369,18 @@ body *, body :before, body :after {
 		// 
 		.product_section {
 			.heading {
-				font-size:28px;
+				font-size:22px;
 				.more {
-					font-size:14px;
+					font-size:12px;
 				}
 			}
 			.uc_flex {
 				display: block;
 				> div {
-					margin-top:60px;
+					margin-top:30px;
 				}
 				.pimg {
-					max-width:60%;
+					max-width:50%;
 					height:auto;
 					margin:0 auto;
 				}

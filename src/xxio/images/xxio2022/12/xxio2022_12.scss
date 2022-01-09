@@ -305,16 +305,13 @@ body *, body :before, body :after {
 		}
 		.products_flex {
 			width: 60vw;
-			// display: flex;
 			margin: 0 auto;
 			margin-bottom:-1vw;
       text-align: center;
 			> p {
 				padding: 0;
         text-align: center;
-        // margin-left:-9vw;
 			}
-      // img {max-width:940px;}
 		}
 		.products_links {
 			display: flex;
@@ -655,7 +652,6 @@ body *, body :before, body :after {
 	.fairway_section {
 		position:relative;
 		min-height:100vh;
-		// padding-top:140px;
 		padding-bottom:10%;
 		background-color: #191919;
 		border-top:15px solid #000be3;
@@ -821,6 +817,29 @@ body *, body :before, body :after {
 					}
 				}
 			}
+		}
+		.hybrids_sub03 {
+			margin-top:125px;
+			.uc_flex {
+				margin-top:15px;
+				margin-bottom:50px;
+				> div {
+					flex:.5;
+					padding:30px;
+					&:first-of-type {
+						background-color: #474747;
+						p {
+							font-weight: bold;
+							font-size:17px;
+							line-height:1.8;
+							color:#fff;
+						}
+					}
+				}
+			}
+		}
+		.hybrids_sub04 {
+			margin-top:170px;
 		}
 		@media screen and (max-width:1280px) {
 			.heading {
@@ -1021,16 +1040,22 @@ body *, body :before, body :after {
 			.row {
 				padding-bottom:0;
 			}
+			.products {
+				padding-bottom:0;
+			}
 			.products_flex {
 				width:100%;
 			}
 			.products_links {
 				> div {
 					p {
-						max-width:130px;
-						min-width:130px;
+						max-width:98px;
+						min-width:98px;
 					}
 				}
+			}
+			.products_bottom > p {
+				max-width:320px;
 			}
 		}
 		// 
@@ -1039,24 +1064,29 @@ body *, body :before, body :after {
 			background-size:100%;
 			background-image: url('./m_tech_bg.png');
 			background-position:center bottom;
+			border-top:5px solid #000be3;
 			.row {
 				position: relative;
-				p {
-					padding-left: 15px;
-					padding-right: 15px;
-					font-size: 24px;
+				.p1 {
+					padding-left:15px;
+					padding-right:15px;
+					font-size:22px;
 				}
 				.p2 {
+					margin-top:25px;
 					padding:0 10%;
-					font-size:14px;
+					font-size:12px;
+					line-height:1.6;
 				}
 				.uc_flex {
 					display: block;
+					width:calc(100% - 80px);
+					margin:35px auto 0;
 					background-size:25px;
 					> div {
-						padding:20px;
+						padding:10px 20px 20px;
 						margin-left:0 !important;
-						background-color: rgba(0,0,0, .2);
+						background-color: rgba(0,0,0, .6);
 						img {
 							max-width:80%;
 						}
@@ -1065,12 +1095,12 @@ body *, body :before, body :after {
 						}
 					}
 					p {
-						font-size:22px;
+						font-size:16px;
 					}
 					span {
-						font-size:13px;
+						font-size:10px;
 					}
-				}
+				} 
 			}
 			.more {
 				position:relative;
@@ -1078,29 +1108,30 @@ body *, body :before, body :after {
 				left:inherit;
 				margin:55% auto 0;
 				display: block;
-				width:160px;
-				font-size:12px;
+				width:140px;
+				font-size:10px;
 			}
 		}
 		// 
 		.driver_section {
 			border-top-width: 7px;
+			.row {
+				padding-left:30px;
+				padding-right:30px;
+			}
 			.headimg {
-				left:60%;
 				top:70px;
-				-webkit-transform: translateX(-50%); 
-				transform: translateX(-50%);  
-				width:200%;
 			}
 			.heading {
 				.ptit {
-					font-size:35px;
+					font-size:40px;
 				}
 				.ptxt {
-					font-size:20px;
+					font-size:22px;
 				}
 			}
 			.driver_sub02 {
+				margin-top:50px;
 				.pimg {
 					max-width:100%;
 					padding-bottom:75px;
@@ -1110,19 +1141,25 @@ body *, body :before, body :after {
 				margin-left:15px;
 				margin-right:15px;
 			}
-			.driver_sub03 .uc_flex {
-				padding:20px 0;
-				margin-bottom:30px;
-				> div {
-					flex:1 !important;
-					&:first-of-type {
-						font-size:24px;
-					}
-					dt {
-						font-size: 14px;
-					}
-					dd {
-						font-size:10px;
+			.driver_sub03 {
+				&.row {
+					padding-left:5%;
+					padding-right:5%;
+				}
+				.uc_flex {
+					padding:20px 0;
+					margin-bottom:30px;
+					> div {
+						flex:1 !important;
+						&:first-of-type {
+							font-size:22px;
+						}
+						dt {
+							font-size: 12px;
+						}
+						dd {
+							font-size:10px;
+						}
 					}
 				}
 			}
@@ -1152,8 +1189,8 @@ body *, body :before, body :after {
 				.desc {
 					flex:.9;
 					padding-left:0 !important;
-					font-size: 12px;
-					line-height:1.4;
+					font-size: 10px;
+					line-height:1.6;
 				}
 			}
 		}	
@@ -1161,29 +1198,29 @@ body *, body :before, body :after {
 		.fairway_section {
 			border-top-width: 7px;
 			.headimg {
-				left:60%;
 				top:70px;
-				-webkit-transform: translateX(-50%); 
-				transform: translateX(-50%);  
-				width:200%;
 			}
 			.heading {
 				.ptit {
-					font-size:35px;
+					font-size:40px;
 				}
 				.ptxt {
-					font-size:20px;
+					font-size:22px;
 				}
 			}
 			.fairway_sub02 {
+				padding-left:30px;
+				padding-right:30px;
 				margin-top:60px;
 				.ptit {
 					max-width:60%;
 				}
 				.uc_flex {
 					> div {
+						display: flex;
 						padding:15px;
 						align-items: center;
+						justify-content: center;
 						&:first-of-type {
 							p {
 								font-size:10px;
@@ -1191,18 +1228,21 @@ body *, body :before, body :after {
 						}
 						&:last-of-type {
 							p {
-								font-size:14px;
+								font-size:12px;
 							}
 						}
 					}
 				}
 			}
 			.fairway_sub03 {
+				padding-left:30px;
+				padding-right:30px;
 				margin-top:60px;
 				.ptit {
 					max-width:60%;
 				}
 				.uc_flex {
+					margin-bottom:0;
 					> div {
 						padding:15px;
 						align-items: center;
@@ -1214,6 +1254,7 @@ body *, body :before, body :after {
 					}
 				}
 			}
+
 			.fairway_sub04 {
 				margin-top:60px;
 				.uc_flex {
@@ -1230,28 +1271,29 @@ body *, body :before, body :after {
 		.hybrids_section {
 			border-top-width: 7px;
 			.headimg {
-				left:60%;
 				top:70px;
-				-webkit-transform: translateX(-50%); 
-				transform: translateX(-50%);  
-				width:200%;
 			}
 			.heading {
+				padding-top:25%;
 				.ptit {
-					font-size:35px;
+					font-size:40px;
 				}
 				.ptxt {
-					font-size:20px;
+					font-size:22px;
 				}
 			}
 			.hybrids_sub02 {
+				padding-left:30px;
+				padding-right:30px;
 				margin-top:60px;
 				.ptit {
 					max-width:60%;
 				}
 				.uc_flex {
 					> div {
+						display: flex;
 						padding:15px;
+						justify-content: center;
 						align-items: center;
 						&:first-of-type {
 							p {
@@ -1260,9 +1302,45 @@ body *, body :before, body :after {
 						}
 						&:last-of-type {
 							p {
-								font-size:14px;
+								font-size:12px;
 							}
 						}
+					}
+				}
+			}
+			.hybrids_sub03 {
+				padding-left:30px;
+				padding-right:30px;
+				margin-top:60px;
+				.ptit {
+					max-width:60%;
+				}
+				.uc_flex {
+					margin-bottom:0;
+					> div {
+						padding:15px;
+						align-items: center;
+						&:first-of-type {
+							p {
+								font-size:10px;
+							}
+						}
+					}
+				}
+				.bottom_to_top {
+					&:last-of-type {
+						margin-top:15px;
+					}
+				}
+			}
+			.hybrids_sub04 {
+				margin-top:60px;
+				.uc_flex {
+					display: block;
+					text-align: center;
+					img {
+						max-width:70%;
+						margin:0 auto;
 					}
 				}
 			}
@@ -1271,26 +1349,30 @@ body *, body :before, body :after {
 		.iron_section {
 			border-top-width: 7px;
 			.headimg {
-				left:60%;
 				top:70px;
-				-webkit-transform: translateX(-50%); 
-				transform: translateX(-50%);  
-				width:200%;
 			}
 			.heading {
+				padding-top:35%;
 				.ptit {
-					font-size:35px;
+					font-size:40px;
 				}
 				.ptxt {
-					font-size:20px;
+					font-size:22px;
 				}
 			}
+			.iron_sub01 {
+				padding-left:30px;
+				padding-right:30px;
+			}
 			.iron_sub02 {
-				margin-top:60px;
+				padding-left:30px;
+				padding-right:30px;
+				margin-top:20px;
 				.desc {
-					font-size:20px;
+					font-size:12px;
 					span {
-						font-size:12px;
+						margin-top:5px;
+						font-size:10px;
 					}
 				}
 			}
@@ -1320,18 +1402,18 @@ body *, body :before, body :after {
 		// 
 		.product_section {
 			.heading {
-				font-size:28px;
+				font-size:22px;
 				.more {
-					font-size:14px;
+					font-size:12px;
 				}
 			}
 			.uc_flex {
 				display: block;
 				> div {
-					margin-top:60px;
+					margin-top:20px;
 				}
 				.pimg {
-					max-width:60%;
+					max-width:50%;
 					height:auto;
 					margin:0 auto;
 				}
