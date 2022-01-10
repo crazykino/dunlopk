@@ -511,6 +511,15 @@ body *, body :before, body :after {
 				font-size:27px;
 				color:#fff;
 			}
+			> div {
+				&:nth-child(3) {
+					.pimg {
+						img {
+							max-width:93%;
+						}
+					}
+				}
+			}
 		}
 		.more {
 			padding:5px 25px;
