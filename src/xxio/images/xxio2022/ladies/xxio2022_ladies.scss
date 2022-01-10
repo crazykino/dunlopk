@@ -503,6 +503,9 @@ body *, body :before, body :after {
 				@media screen and (min-width:1920px) {
 					height:290px;
 				}
+				img {
+					max-height:100%;
+				}
 			}
 			.p1 {
 				font-size:27px;

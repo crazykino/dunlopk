@@ -230,9 +230,10 @@
 			<div class="xxio2022_content">
 				<section class="top_section">
 					<p class="dunlop_logo"><img src="../images/xxio2022/dunlop_logo_white.svg" class="imgLoaded" alt="" /></p>
+					<p class="visual_mute" id="btn_video_mute"><img src="../images/xxio2022/sound_off.png" class="" alt="soundoff" /></p>
 					<div class="video">
 						<button class="btn_play btnplay" onclick="playPauseMedia(this)"><span class="a11y">play</span></button>
-						<video muted="muted" onloadedmetadata="this.muted = true" poster="../images/xxio2022/xxio2022_introbg.jpg" autoplay playsinline>
+						<video id="video" muted="muted" onloadedmetadata="this.muted = true" poster="../images/xxio2022/xxio2022_introbg.jpg" autoplay playsinline>
 							<source src="https://www.xxio.co.kr/images/video/XXIO_Adptation_Main.mp4" type="video/mp4">
 						</video>
 					</div>
@@ -296,7 +297,7 @@
 					</div>
 				</section>
 
-				<section class="movie_section movie_sec01">
+				<section id="activewing" class="movie_section movie_sec01">
 					<div class="row left_to_right">
 						<a href="#" onclick="layerOpen('vodpop');vodLink('XrFAo_-0ERU');return false;"  class="btnplay">
 							<p class="f_yellow"><img src="../images/xxio2022/movie_txt.png" alt="ActivWing x REBOUND FRAME"></p>
@@ -725,6 +726,20 @@
 			})
 		</script>
 		<script>
+			//소리 컨트롤
+			var video_muted = false;
+			$( document ).ready(function() {	
+			 $('#btn_video_mute').on('click', function(){
+					video_muted = !video_muted;
+					$('#video').prop("muted", !$('#video').prop("muted"));
+					if(video_muted){
+						$('.visual_mute img').attr('src', '../images/xxio2022/sound_on.png')
+					} else {
+						$('.visual_mute img').attr('src', '../images/xxio2022/sound_off.png')
+					}
+				});
+		 });
+		 
 			$(function(){
 				var device = (function () {
 					var ua = navigator.userAgent;

@@ -278,7 +278,7 @@ body *, body :before, body :after {
 
   .debut_section {
 		position:relative;
-    min-height:100vh;
+    min-height:95vh;
     padding-bottom:10%;
 		margin-top:-10px;
     background-color: #000;
@@ -289,7 +289,9 @@ body *, body :before, body :after {
 			left: 0;
 			width: 100%;
 			height:100%;
+			overflow: hidden;
 			img {
+				margin-top:-10%;
 				width:100%;
 			}
 		}
@@ -302,10 +304,14 @@ body *, body :before, body :after {
 				padding: 0;
 				text-align: center;
 			}
+			._logo {
+				max-width:350px;
+				margin:-70px auto 0;
+			}
 		}
 		.products_bottom {
       position:relative;
-      margin-top:10%;
+      margin-top:5%;
 			text-align: center;
       z-index: 1;
       img {
@@ -364,6 +370,14 @@ body *, body :before, body :after {
 			}
 			&:hover {
 				border-color:#000;
+				&:before {
+					border-color: #fff;
+					content: '';
+					background-color: #fff;
+				}
+				span {
+					color:#000;
+				}
 			}
 		}
 		.row {
@@ -785,6 +799,34 @@ body *, body :before, body :after {
 				}
 			}
 		}
+		.hybrids_sub03 {
+			margin-top:125px;
+      .ptit {
+        img {
+          max-width:470px;
+        }
+      }
+			.uc_flex {
+				margin-top:15px;
+				margin-bottom:50px;
+				> div {
+					flex:.5;
+					padding:30px;
+					&:first-of-type {
+						background-color: #474747;
+						p {
+							font-weight: bold;
+							font-size:17px;
+							line-height:1.8;
+							color:#fff;
+						}
+					}
+				}
+			}
+		}
+		.hybrids_sub04 {
+			margin-top:170px;
+		}
 		@media screen and (max-width:1280px) {
 			.heading {
 				.ptit {
@@ -856,11 +898,6 @@ body *, body :before, body :after {
 					color:#fff;
 				}
 			}
-			.pimg {
-				&:last-of-type {
-					margin-top:-14%;
-				}
-			}
 			.uc_flex {
 				margin-top:15px;
 				> div {
@@ -920,7 +957,14 @@ body *, body :before, body :after {
 			margin-top:40px;
 			text-align: center;
 			.pimg {
+				height:17vw;
 				text-align: center;
+				@media screen and (min-width:1920px) {
+					height:290px;
+				}
+				img {
+					max-height:100%;
+				}
 			}
 			.p1 {
 				font-size:27px;
@@ -934,6 +978,12 @@ body *, body :before, body :after {
 				span {
 					font-size:15px;
 					color:#00ff31;
+				}
+				&:hover {
+					border-color: #fff;
+					&::before {
+						background-color: #fff;
+					}
 				}
 			}
 		}
@@ -979,11 +1029,17 @@ body *, body :before, body :after {
 		.debut_section {
 			min-height:auto;
 			padding-top:0 !important;
+			padding-bottom:140px !important;
 			.row {
 				padding-bottom:0;
 			}
 			> p {
 				position:relative;
+			}
+			> ._mo {
+				img {
+					margin-top:0;
+				}
 			}
 			.products_flex {
 				position:absolute;
@@ -993,6 +1049,13 @@ body *, body :before, body :after {
 				transform: translate(-50%, 0);  
 				width:83%;
 				padding-top:20%;
+				._logo {
+					width:120px;
+					margin-top:-30px;
+				}
+				._mo {
+					margin-top:20px;
+				}
 			}
 			.products_links {
 				> div {
@@ -1003,6 +1066,7 @@ body *, body :before, body :after {
 				}
 			}
 			.products_bottom {
+				padding-top:22%;
 				> p {
 					max-width:320px;
 				}
@@ -1121,6 +1185,8 @@ body *, body :before, body :after {
 			}
 			.driver_sub04 {
 				.heading {
+					padding-left:15px;
+					padding-right:15px;
 					padding-top:60px;
 					.ptxt {
 						width:80%;
@@ -1297,6 +1363,47 @@ body *, body :before, body :after {
 						&:last-of-type {
 							p {
 								font-size:12px;
+							}
+						}
+					}
+				}
+			}
+			.hybrids_sub03 {
+				margin-top:60px;
+				.ptit {
+					max-width:60%;
+					img {
+						max-width:100%;
+					}
+				}
+				.uc_flex {
+					margin-bottom:15px;
+					> div {
+						padding:15px;
+						align-items: center;
+						&:first-of-type {
+							p {
+								font-size:10px;
+							}
+						}
+					}
+				}
+			}
+			.hybrids_sub04 {
+				margin-top:60px;
+				.uc_flex {
+					display: block;
+					text-align: center;
+					img {
+						max-width:70%;
+						margin:0 auto;
+					}
+					> div {
+						&:last-of-type {
+							margin-top:50px;
+							img {
+								max-width:100%;
+								margin-left:-5%;
 							}
 						}
 					}
